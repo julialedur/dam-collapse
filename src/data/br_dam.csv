@@ -1,0 +1,25 @@
+dam_name,company_name,latitude,longitude,state,city,risk_category,potential_damage
+Diques EMESA,Empresa de Mineração Esperança Sa,-20.115,-44.218,MG,BRUMADINHO,BAIXO,MÉDIO
+Barragem da Serrinha,Ferrous Resources do Brasil Sa,-20.174,-48.894,MG,BRUMADINHO,BAIXO,MÉDIO
+Barragem 4C,MINERACOES BRASILEIRAS REUNIDAS SA,-20.448,-44.097,MG,BRUMADINHO,BAIXO,ALTO
+Barragem Capim Branco,MINERACOES BRASILEIRAS REUNIDAS SA,-20.108,-44.073,MG,BRUMADINHO,BAIXO,ALTO
+Barragem B1 Ipê,Mmx Sudeste Mineração S.a.,-20.12,-44.306999999999995,MG,BRUMADINHO,ALTO,MÉDIO
+Barragem B1A Ipê,Mmx Sudeste Mineração S.a.,-20.123,-44.313,MG,BRUMADINHO,BAIXO,ALTO
+Dique B3 Ipê,Mmx Sudeste Mineração S.a.,-20.119,-44.316,MG,BRUMADINHO,BAIXO,MÉDIO
+Dique B4 Ipê,Mmx Sudeste Mineração S.a.,-20.118,-44.317,MG,BRUMADINHO,BAIXO,BAIXO
+Dique Conquistinha Ipê,Mmx Sudeste Mineração S.a.,-20.116,-44.298,MG,BRUMADINHO,ALTO,MÉDIO
+Barragem I,Vale S A,-20.118,-44.121,MG,BRUMADINHO,BAIXO,ALTO
+Barragem IV,Vale S A,-20.134,-44.117,MG,BRUMADINHO,BAIXO,ALTO
+Barragem IV-A,Vale S A,-20.137999999999998,-44.121,MG,BRUMADINHO,BAIXO,ALTO
+Barragem Menezes I,Vale S A,-20.119,-44.136,MG,BRUMADINHO,BAIXO,BAIXO
+Barragem Menezes II,Vale S A,-20.125999999999998,-44.136,MG,BRUMADINHO,BAIXO,ALTO
+Barragem VI,Vale S A,-20.117,-44.123999999999995,MG,BRUMADINHO,BAIXO,ALTO
+Barragem VII,Vale S A,-20.104,-44.119,MG,BRUMADINHO,BAIXO,MÉDIO
+SANTA BÁRBARA,Vallourec Mineração Ltda.,-20.162,-44.006,MG,BRUMADINHO,BAIXO,ALTO
+Barragem de Gabiões,Empresa de Mineração Esperança Sa,-20.111,-44.226000000000006,MG,BRUMADINHO,BAIXO,MÉDIO
+Barragem B-2,Nacional de Grafite Ltda,-20.441,-45.129,MG,ITAPECERICA,BAIXO,MÉDIO
+Barragem B-4,Nacional de Grafite Ltda,-20.437,-45.148,MG,ITAPECERICA,BAIXO,MÉDIO
+Barragem B-1,Nacional de Grafite Ltda,-20.444, -20.444,MG,ITAPECERICA,BAIXO,MÉDIO
+Gafanhoto,CEMIG Geração e Transmissão S.A.,-20.100, -44.848,MG,Divinópolis,BAIXO,ALTO
+Cajuru,CEMIG Geração e Transmissão S.A.,-20.238, -44.754,MG,Carmo do Cajuru,MÉDIO,ALTO
+Retiro Baixo,Retiro Baixo Energética S.A.,-18.875, -44.781,MG,Curvelo,MÉDIO,ALTO

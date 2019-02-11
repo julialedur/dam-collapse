@@ -1,0 +1,370 @@
+dam_name,company_name,latitude,longitude,state,city,risk_category,potential_damage
+A0 (Mina Barreiro),Vale Fertilizantes S A,-19.617,-47.033,MG,Araxá,BAIXO,ALTO
+Alemães,GERDAU AÇOMINAS S.A.,-20.422,-43.75,MG,Ouro Preto,BAIXO,ALTO
+B1,Itaminas Comércio de Minérios S.a.,-20.064,-44.114,MG,Sarzedo,BAIXO,ALTO
+B1/B4 (Mina Barreiro),Vale Fertilizantes S A,-19.634,-46.997,MG,Araxá,BAIXO,ALTO
+B2,Itaminas Comércio de Minérios S.a.,-20.081,-44.111999999999995,MG,Sarzedo,BAIXO,ALTO
+B2 (Mina Barreiro),Vale Fertilizantes S A,-19.644000000000002,-46.974,MG,Araxá,BAIXO,MÉDIO
+B4,Itaminas Comércio de Minérios S.a.,-20.093,-44.093,MG,Sarzedo,BAIXO,ALTO
+B5,VERMELHÃO MINERAÇÃO IND. E COM. LTDA,-20.402,-43.534,MG,Ouro Preto,MÉDIO,ALTO
+B5 (Mina Barreiro),Vale Fertilizantes S A,-19.617,-47.022,MG,Araxá,BAIXO,ALTO
+Bacia Lavador de Rodas,GERDAU AÇOMINAS S.A.,-20.293,-43.938,MG,Itabirito,MÉDIO,MÉDIO
+Baia da UTM I,GERDAU AÇOMINAS S.A.,-20.436,-43.776,MG,Ouro Preto,MÉDIO,ALTO
+Baias da UTM II,GERDAU AÇOMINAS S.A.,-20.455,-43.777,MG,Ouro Preto,BAIXO,MÉDIO
+Barragem 01 - Jose Jaime,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.136,-44.38399999999999,MG,Itatiaiuçu,BAIXO,ALTO
+Barragem 02 - Canindé,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.139,-44.38,MG,Itatiaiuçu,BAIXO,ALTO
+Barragem 03,Companhia Siderúrgica Nacional SA,-20.319000000000003,-44.589,MG,Arcos,BAIXO,MÉDIO
+Barragem 03 - Zé da Grota,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.137999999999998,-44.388000000000005,MG,Itatiaiuçu,BAIXO,ALTO
+Barragem 1,Votorantim Metais Zinco S.A.,-17.498,-46.818000000000005,MG,Paracatu,BAIXO,ALTO
+Barragem 2,Votorantim Metais Zinco S.A.,-17.511,-46.828,MG,Paracatu,BAIXO,ALTO
+Barragem 3,Votorantim Metais Zinco S.A.,-17.514,-46.82899999999999,MG,Paracatu,BAIXO,ALTO
+BARRAGEM 5,Vale S A,-19.977,-43.893,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM 5 (Mutuca),Vale S A,-20.026,-43.942,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM 7,Ferrous Resources do Brasil Sa,-20.561999999999998,-43.951,MG,Congonhas,BAIXO,ALTO
+BARRAGEM 7B,Vale S A,-19.967,-43.883,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM 8B,Vale S A,-19.959,-43.873000000000005,MG,Nova Lima,BAIXO,ALTO
+Barragem A,KINROSS BRASIL MINERAÇÃO S. A.,-17.169,-46.891000000000005,MG,Paracatu,BAIXO,ALTO
+BARRAGEM A (UPM),Vale Fertilizantes S A,-18.379,-46.926,MG,Patos De Minas,BAIXO,MÉDIO
+Barragem Água fria - rejeito,Topazio Imperial Mineração Comercio e Industria Ltda,-20.43,-43.611000000000004,MG,Ouro Preto,ALTO,ALTO
+BARRAGEM ALCINDO VIEIRA (CAUÊ),Vale S A,-19.574,-43.246,MG,Itabira,BAIXO,MÉDIO
+BARRAGEM ALTO JACUTINGA,Vale S A,-20.426,-43.886,MG,Congonhas,BAIXO,MÉDIO
+Barragem Aroeira,VOTORANTIM METAIS ZINCO S/A,-17.972,-46.81399999999999,MG,Vazante,BAIXO,ALTO
+BARRAGEM AUXILIAR DO VIGIA,Nacional Minerios S/A,-20.434,-43.835,MG,Ouro Preto,BAIXO,ALTO
+BARRAGEM B,Vale Fertilizantes S A,-18.381,-46.927,MG,Patos De Minas,BAIXO,MÉDIO
+BARRAGEM B 03,Vale S A,-19.878,-43.378,MG,São Gonçalo Do Rio Abaixo,BAIXO,ALTO
+Barragem B1,Herculano Mineração Ltda.,-20.253,-43.931999999999995,MG,Itabirito,ALTO,MÉDIO
+Barragem B1,Mineração Geral do Brasil Ltda.,-20.065,-44.028999999999996,MG,Brumadinho,BAIXO,MÉDIO
+Barragem B-1,Nacional de Grafite Ltda,-20.444000000000003,-45.133,MG,Itapecerica,BAIXO,MÉDIO
+BARRAGEM B1 - MANGABEIRAS,IMA - INDÚSTRIA DE MADEIRA IMUNIZADA LTDA.,-19.962,-43.927,MG,Belo Horizonte,BAIXO,ALTO
+Barragem B1 Auxiliar Tico Tico,Mmx Sudeste Mineração S.a.,-20.102999999999998,-44.288000000000004,MG,Igarapé,BAIXO,ALTO
+Barragem B1 Ipê,Mmx Sudeste Mineração S.a.,-20.117,-44.306999999999995,MG,Brumadinho,BAIXO,ALTO
+Barragem B1 Tico Tico,Mmx Sudeste Mineração S.a.,-20.102,-44.288999999999994,MG,Igarapé,BAIXO,ALTO
+Barragem B1A Ipê,EMICOM Mmx Sudeste Mineração S.a.,-20.123,-44.312,MG,Brumadinho,BAIXO,ALTO
+Barragem B2,Herculano Mineração Ltda.,-20.250999999999998,-43.93600000000001,MG,Itabirito,BAIXO,MÉDIO
+Barragem B2,Mineração Geral do Brasil Ltda.,-20.066,-44.027,MG,Brumadinho,BAIXO,MÉDIO
+BARRAGEM B2,Nacional Minerios S/A,-20.160999999999998,-43.847,MG,Rio Acima,BAIXO,ALTO
+Barragem B-2,Nacional de Grafite Ltda,-20.441,-45.129,MG,Itapecerica,MÉDIO,ALTO
+BARRAGEM B2 AUXILIAR,Nacional Minerios S/A,-20.163,-43.849,MG,Rio Acima,BAIXO,ALTO
+Barragem B2 Tico Tico,Mmx Sudeste Mineração S.a.,-20.11,-44.287,MG,Igarapé,BAIXO,MÉDIO
+Barragem B3,Herculano Mineração Ltda.,-20.252,-43.938,MG,Itabirito,BAIXO,MÉDIO
+BARRAGEM B3 - DIQUE AUXILIAR MANGABEIRAS,IMA - INDÚSTRIA DE MADEIRA IMUNIZADA LTDA.,-19.964000000000002,-43.928999999999995,MG,Belo Horizonte,BAIXO,ALTO
+BARRAGEM B3-B4,MINERACOES BRASILEIRAS REUNIDAS SA,-20.047,-43.95399999999999,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM B4,Companhia Siderúrgica Nacional SA,-20.486,-43.886,MG,Congonhas,BAIXO,ALTO
+Barragem B4,Herculano Mineração Ltda.,-20.259,-43.927,MG,Itabirito,BAIXO,ALTO
+Barragem B-4,Nacional de Grafite Ltda,-20.438,-45.148,MG,Itapecerica,BAIXO,ALTO
+BARRAGEM B5,Companhia Siderúrgica Nacional SA,-20.49,-43.891000000000005,MG,Congonhas,BAIXO,ALTO
+BARRAGEM B6,MINERACOES BRASILEIRAS REUNIDAS SA,-20.058,-43.964,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM B7,MINERACOES BRASILEIRAS REUNIDAS SA,-20.039,-43.928999999999995,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM BAIXO JOÃO PEREIRA,Vale S A,-20.44,-43.905,MG,Congonhas,BAIXO,MÉDIO
+BARRAGEM BARNABÉ,Vale S A,-20.426,-43.891999999999996,MG,Congonhas,BAIXO,MÉDIO
+Barragem BD-2 (CMT),Vale Fertilizantes S A,-19.837,-46.836999999999996,MG,Tapira,BAIXO,BAIXO
+Barragem BD-5 (CMT),Vale Fertilizantes S A,-19.820999999999998,-46.842,MG,Tapira,BAIXO,ALTO
+Barragem BL-1 (CMT),Vale Fertilizantes S A,-19.842,-45.864,MG,Tapira,BAIXO,ALTO
+BARRAGEM BOM JARDIM,BAUMINAS MINERAÇÃO LTDA,-21.211,-42.715,MG,Miraí,BAIXO,ALTO
+BARRAGEM BORRACHUDO II,Vale S A,-19.613,-43.266999999999996,MG,Itabira,BAIXO,BAIXO
+Barragem BR (CMT),Vale Fertilizantes S A,-19.838,-46.833,MG,Tapira,BAIXO,ALTO
+Barragem BRI (CMT),Vale Fertilizantes S A,-19.789,-46.879,MG,Tapira,BAIXO,ALTO
+BARRAGEM CAMBUCAL I (MINAS DO MEIO),Vale S A,-19.641,-43.24100000000001,MG,Itabira,BAIXO,ALTO
+BARRAGEM CAMBUCAL II (Minas do Meio),Vale S A,-19.646,-43.242,MG,Itabira,BAIXO,ALTO
+BARRAGEM CAMPO GRANDE,Vale S A,-20.176,-43.486999999999995,MG,Mariana,BAIXO,ALTO
+BARRAGEM CAPÃO DA SERRA,Vale S A,-20.067,-43.931000000000004,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM CAPIM BRANCO (Inativa),MINERACOES BRASILEIRAS REUNIDAS SA,-20.108,-44.074,MG,Brumadinho,BAIXO,ALTO
+Barragem Captação 1,Topazio Imperial Mineração Comercio e Industria Ltda,-20.430999999999997,-43.614,MG,Ouro Preto,ALTO,ALTO
+Barragem Captação 2,Topazio Imperial Mineração Comercio e Industria Ltda,-20.429000000000002,-43.611999999999995,MG,Ouro Preto,ALTO,ALTO
+BARRAGEM CASA DE PEDRA,Companhia Siderúrgica Nacional SA,-20.506,-43.883,MG,Congonhas,BAIXO,ALTO
+BARRAGEM CEMIG I,Vale S A,-19.576,-43.205,MG,Itabira,BAIXO,ALTO
+BARRAGEM CEMIG II,Vale S A,-19.572,-43.196999999999996,MG,Itabira,BAIXO,ALTO
+Barragem Central,Mineração Usiminas S.a.,-20.148,-44.406000000000006,MG,Itatiaiuçu,BAIXO,ALTO
+Barragem Central,SAFM MINERAÇÃO LTDA,-20.272000000000002,-43.895,MG,Itabirito,BAIXO,BAIXO
+BARRAGEM CIANITA I,Vale S A,-20.195999999999998,-43.867,MG,Nova Lima,BAIXO,MÉDIO
+BARRAGEM CONCEIÇÃO,Vale S A,-19.648,-43.273999999999994,MG,Itabira,BAIXO,ALTO
+Barragem da Mina II,COMPANHIA MINERADORA DO PIROCLORO DE ARAXÁ,-19.657,-46.94,MG,Araxá,BAIXO,BAIXO
+Barragem da Voçoroca,Go4 Participações e Emprrendimentos S.a.,-19.561,-42.728,MG,Antônio Dias,BAIXO,MÉDIO
+BARRAGEM DE CONTENÇÃO DIQUE D-03,SICAL INDUSTRIAL LTDA,-20.025,-44.013000000000005,MG,Belo Horizonte,BAIXO,BAIXO
+Barragem de Rejeitos,Anglo American Minério de Ferro Brasil S.a,-18.863,-43.408,MG,Conceição Do Mato Dentro,BAIXO,ALTO
+Barragem de Rejeitos,ARCELORMITTAL MINERAÇÃO SERRA AZUL S.A.,-20.137999999999998,-44.394,MG,Itatiaiuçu,BAIXO,ALTO
+BARRAGEM DE REJEITOS,Votorantim Metais Zinco S A,-20.893,-46.705,MG,Fortaleza De Minas,BAIXO,ALTO
+Barragem de Rejeitos- MRDM,Mineração Riacho dos Machados Ltda.,-16.055999999999997,-43.129,MG,Riacho Dos Machados,BAIXO,ALTO
+BARRAGEM DICÃO,Vale S A,-19.874000000000002,-43.379,MG,São Gonçalo Do Rio Abaixo,BAIXO,ALTO
+BARRAGEM DICÃO LESTE,Vale S A,-20.139,-43.413000000000004,MG,Catas Altas,BAIXO,MÉDIO
+BARRAGEM DO DIOGO,Vale S A,-19.93,-43.196000000000005,MG,Rio Piracicaba,BAIXO,ALTO
+BARRAGEM DO DOUTOR,Vale S A,-20.291,-43.49100000000001,MG,Ouro Preto,BAIXO,ALTO
+BARRAGEM DO ELEFANTE,Vale S A,-19.932000000000002,-43.208999999999996,MG,Rio Piracicaba,BAIXO,BAIXO
+BARRAGEM DO GRUPO (Inativa),Vale S A,-20.415,-43.865,MG,Ouro Preto,BAIXO,BAIXO
+Barragem do Josino,FERRO + MINERAÇÃO S/A,-20.425,-43.86600000000001,MG,Ouro Preto,BAIXO,MÉDIO
+BARRAGEM DO VIGIA,Nacional Minerios S/A,-20.438,-43.833,MG,Ouro Preto,BAIXO,ALTO
+BARRAGEM ECOLÓGICA 1,Nacional Minerios S/A,-20.158,-43.847,MG,Rio Acima,BAIXO,ALTO
+Barragem Eustáquio,KINROSS BRASIL MINERAÇÃO S. A.,-18.146,-46.901,MG,Paracatu,BAIXO,ALTO
+BARRAGEM FORQUILHA I,Vale S A,-20.406,-43.856,MG,Ouro Preto,BAIXO,MÉDIO
+BARRAGEM FORQUILHA II,Vale S A,-20.408,-43.852,MG,Ouro Preto,BAIXO,MÉDIO
+BARRAGEM FORQUILHA III,Vale S A,-20.410999999999998,-43.836000000000006,MG,Ouro Preto,BAIXO,ALTO
+BARRAGEM FORQUILHA IV,Vale S A,-20.395,-43.852,MG,Ouro Preto,BAIXO,MÉDIO
+BARRAGEM GALEGO,Vale S A,-19.857,-43.803999999999995,MG,Sabará,BAIXO,ALTO
+BARRAGEM GAMBÁ,Vale S A,-20.430999999999997,-43.883,MG,Congonhas,BAIXO,MÉDIO
+Barragem Germano,Samarco Mineração S.a.,-20.215999999999998,-43.467,MG,Mariana,ALTO,ALTO
+BARRAGEM I (Córrego Feijão),Vale S A,-20.119,-44.12,MG,Brumadinho,BAIXO,ALTO
+Barragem II Mina Engenho,Mundo Mineração Ltda.,-20.063,-43.795,MG,Rio Acima,ALTO,ALTO
+BARRAGEM ITABIRUÇU (Conceição),Vale S A,-19.685,-43.286,MG,Itabira,BAIXO,ALTO
+BARRAGEM IV (Córrego do Feijão),Vale S A,-20.137,-44.12,MG,Brumadinho,BAIXO,ALTO
+BARRAGEM IV-A (Córrego do Feijão),Vale S A,-20.139,-44.123000000000005,MG,Brumadinho,BAIXO,ALTO
+BARRAGEM JIRAU (CAUÊ),Vale S A,-19.57,-43.231,MG,Itabira,BAIXO,MÉDIO
+BARRAGEM LAGOA DO IPÊ (BARRAGEM DE ÁGUA),VALE MANGANÊS S.A.,-20.639,-43.773999999999994,MG,Conselheiro Lafaiete,BAIXO,MÉDIO
+BARRAGEM LARANJEIRAS,Vale S A,-19.848,-43.422,MG,Barão De Cocais,BAIXO,ALTO
+BARRAGEM MARAVILHAS I,Vale S A,-20.225,-43.873000000000005,MG,Itabirito,BAIXO,ALTO
+BARRAGEM MARAVILHAS II,Vale S A,-20.214000000000002,-43.891999999999996,MG,Itabirito,BAIXO,ALTO
+BARRAGEM MARÉS I,Vale S A,-20.425,-43.928000000000004,MG,Belo Vale,BAIXO,BAIXO
+BARRAGEM MARÉS II,Vale S A,-20.434,-43.931000000000004,MG,Belo Vale,BAIXO,ALTO
+BARRAGEM MENEZES II (Córrego do Feijão),Vale S A,-20.128,-44.138000000000005,MG,Brumadinho,BAIXO,ALTO
+BARRAGEM MERCES,BAUMINAS MINERAÇÃO LTDA,-21.131,-43.349,MG,Mercês,BAIXO,BAIXO
+Barragem Mina Engenho,Mundo Mineração Ltda.,-20.062,-43.794,MG,Rio Acima,ALTO,ALTO
+Barragem Mina Oeste (Somisa),Mineração Usiminas S.a.,-20.167,-44.46,MG,Itatiaiuçu,MÉDIO,ALTO
+BARRAGEM MONJOLO,Vale S A,-19.963,-43.238,MG,Rio Piracicaba,BAIXO,ALTO
+BARRAGEM MOSQUITO,Vale S A,-20.105999999999998,-43.403999999999996,MG,Catas Altas,BAIXO,ALTO
+BARRAGEM NATIVIDADE (TIMBOPEBA),Vale S A,-20.28,-43.485,MG,Ouro Preto,BAIXO,ALTO
+Barragem Paciência,Mineração Serras do Oeste Ltda,-20.209,-43.68600000000001,MG,Itabirito,BAIXO,ALTO
+BARRAGEM PÉ DE SERRA,Vale S A,-19.889,-43.19,MG,Rio Piracicaba,BAIXO,BAIXO
+BARRAGEM PENEIRINHA,Vale S A,-20.111,-43.964,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM PIABAS (CAUÊ),Vale S A,-19.563,-43.206,MG,Itabira,BAIXO,ALTO
+BARRAGEM PONTAL (Mina Cauê),Vale S A,-19.625,-43.183,MG,Itabira,BAIXO,ALTO
+BARRAGEM PORTEIRINHA,Vale S A,-19.959,-43.239,MG,Rio Piracicaba,BAIXO,ALTO
+BARRAGEM PRINCIPAL,Vale S A,-20.173,-43.615,MG,Santa Bárbara,BAIXO,MÉDIO
+BARRAGEM RIO DO PEIXE (Conceição),Vale S A,-19.674,-43.236000000000004,MG,Itabira,BAIXO,ALTO
+Barragem Samambaia 0 (zero),Mineração Usiminas S.a.,-20.167,-44.435,MG,Itatiaiuçu,BAIXO,ALTO
+BARRAGEM SANTANA (CAUÊ),Vale S A,-19.555,-43.161,MG,Itabira,BAIXO,ALTO
+Barragem Santarém,Samarco Mineração S.a.,-20.23,-43.442,MG,Mariana,ALTO,ALTO
+Barragem Santo Antônio,KINROSS BRASIL MINERAÇÃO S. A.,-17.147000000000002,-45.854,MG,Paracatu,BAIXO,ALTO
+BARRAGEM SUL (CÓRREGO DO CANAL),Vale S A,-19.884,-43.386,MG,São Gonçalo Do Rio Abaixo,BAIXO,ALTO
+BARRAGEM SUL INFERIOR,Vale S A,-19.976,-43.601000000000006,MG,Barão De Cocais,BAIXO,ALTO
+BARRAGEM SUL SUPERIOR,Vale S A,-19.97,-43.597,MG,Barão De Cocais,BAIXO,ALTO
+BARRAGEM TAQUARAS,MINERACOES BRASILEIRAS REUNIDAS SA,-20.039,-43.928999999999995,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM TIMBOPEBA,Vale S A,-20.272000000000002,-43.497,MG,Ouro Preto,BAIXO,ALTO
+BARRAGEM VARGEM GRANDE,Vale S A,-20.182000000000002,-43.867,MG,Nova Lima,BAIXO,ALTO
+BARRAGEM VI (Córrego do Feijão),Vale S A,-20.119,-44.123999999999995,MG,Brumadinho,BAIXO,ALTO
+BARRAGEM VII (Córrego do Feijão),Vale S A,-20.104,-44.119,MG,Brumadinho,BAIXO,MÉDIO
+Bocaina,GERDAU AÇOMINAS S.A.,-20.442,-43.792,MG,Ouro Preto,BAIXO,ALTO
+Cachoeirinha,Vallourec Mineração Ltda.,-20.152,-43.965,MG,Nova Lima,BAIXO,ALTO
+Calcinados,ANGLOGOLD  ASHANTI CÓRREGO DO SÍTIO MINERAÇÃO S.A.,-19.974,-43.82899999999999,MG,Nova Lima,BAIXO,ALTO
+Califórnia,Nacional de Grafite Ltda,-16.207,-39.946999999999996,MG,Salto Da Divisa,BAIXO,ALTO
+CAVA B,GALVANI INDUSTRIA COMERCIO E SERVIÇOS S.A.,-18.28,-46.861999999999995,MG,Lagamar,BAIXO,ALTO
+CAVA C,GALVANI INDUSTRIA COMERCIO E SERVIÇOS S.A.,-18.255,-46.842,MG,Lagamar,BAIXO,BAIXO
+Cava do Germano,Samarco Mineração S.a.,-20.199,-43.496,MG,Mariana,BAIXO,ALTO
+Clarificação Bocaina,GERDAU AÇOMINAS S.A.,-20.441,-43.788999999999994,MG,Ouro Preto,BAIXO,ALTO
+Cocoruto,ANGLOGOLD  ASHANTI CÓRREGO DO SÍTIO MINERAÇÃO S.A.,-19.974,-43.82899999999999,MG,Nova Lima,BAIXO,ALTO
+Contenção de Rejeitos de CDS II,ANGLOGOLD  ASHANTI CÓRREGO DO SÍTIO MINERAÇÃO S.A.,-19.985,-43.471000000000004,MG,Santa Bárbara,BAIXO,ALTO
+Contenção de Rejeitos de Cuiabá,ANGLOGOLD  ASHANTI CÓRREGO DO SÍTIO MINERAÇÃO S.A.,-19.866,-43.727,MG,Sabará,BAIXO,ALTO
+Dique 01,COMPANHIA DE MINERAÇÃO SERRA AZUL - COMISA,-20.119,-44.32,MG,Brumadinho,BAIXO,MÉDIO
+Dique 01,EMPABRA - EMPRESA DE MINERAÇÃO PAU BRANCO LTDA.,-19.986,-43.885,MG,Belo Horizonte,MÉDIO,ALTO
+Dique 02,COMPANHIA DE MINERAÇÃO SERRA AZUL - COMISA,-20.121,-44.321999999999996,MG,Brumadinho,BAIXO,MÉDIO
+Dique 02,EMPABRA - EMPRESA DE MINERAÇÃO PAU BRANCO LTDA.,-19.934,-43.883,MG,Belo Horizonte,ALTO,ALTO
+DIQUE 02 PDE 02,Vale S A,-19.855999999999998,-43.799,MG,Sabará,BAIXO,BAIXO
+DIQUE 02 PONTAL,Vale S A,-19.613,-43.191,MG,Itabira,BAIXO,ALTO
+Dique 03,COMPANHIA DE MINERAÇÃO SERRA AZUL - COMISA,-20.122,-44.318999999999996,MG,Brumadinho,BAIXO,ALTO
+DIQUE 03 PONTAL,Vale S A,-19.608,-43.184,MG,Itabira,BAIXO,ALTO
+DIQUE 04 PONTAL (ou Dique 4 braço) CAUÊ,Vale S A,-19.607,-43.176,MG,Itabira,BAIXO,ALTO
+DIQUE 05 PONTAL,Vale S A,-19.605,-43.173,MG,Itabira,BAIXO,ALTO
+DIQUE 06 PONTAL (CAUÊ),Vale S A,-19.613,-43.174,MG,Itabira,BAIXO,ALTO
+DIQUE 105 I (Minas do Meio),Vale S A,-19.627,-43.238,MG,Itabira,BAIXO,ALTO
+Dique 1A Conceição,Vale S A,-19.644000000000002,-43.282,MG,Itabira,BAIXO,BAIXO
+DIQUE 1B CONCEIÇÃO,Vale S A,-19.639,-43.282,MG,Itabira,BAIXO,BAIXO
+DIQUE B,Vale S A,-20.124000000000002,-43.925,MG,Nova Lima,BAIXO,ALTO
+Dique B3 Ipê,EMICOM Mmx Sudeste Mineração S.a.,-20.119,-44.316,MG,Brumadinho,ALTO,MÉDIO
+Dique B4 Ipê,EMICOM Mmx Sudeste Mineração S.a.,-20.117,-44.317,MG,Brumadinho,ALTO,MÉDIO
+Dique Conquistinha,Mmx Sudeste Mineração S.a.,-20.116,-44.298,MG,Brumadinho,ALTO,ALTO
+DIQUE CORDÃO NOVA VISTA (CAUÊ),Vale S A,-19.617,-43.203,MG,Itabira,BAIXO,ALTO
+Dique Corte Azul,Vale S A,-20.418,-43.9,MG,Ouro Preto,BAIXO,BAIXO
+Dique Couves [MBL],Mineração Usiminas S.a.,-20.152,-44.446000000000005,MG,Itatiaiuçu,BAIXO,MÉDIO
+DIQUE D,BRASMIC MINERAÇÃO AREIA E BRITA LTDA.,-19.986,-44.122,MG,Betim,BAIXO,ALTO
+DIQUE DA PDE 03,Vale S A,-19.864,-43.356,MG,São Gonçalo Do Rio Abaixo,BAIXO,BAIXO
+DIQUE DA PDE LAGOA SECA,Vale S A,-20.349,-43.413000000000004,MG,Mariana,BAIXO,MÉDIO
+DIQUE DA PERA,Vale S A,-20.347,-43.431000000000004,MG,Mariana,BAIXO,ALTO
+DIQUE DA PILHA DA VILA II,Companhia Siderúrgica Nacional SA,-20.452,-43.9,MG,Congonhas,BAIXO,MÉDIO
+Dique de Contenção de Sedimentos 01,Anglo American Minério de Ferro Brasil S.a,-18.899,-43.408,MG,Conceição Do Mato Dentro,BAIXO,MÉDIO
+Dique de Contenção de Sedimentos 02,Anglo American Minério de Ferro Brasil S.a,-18.89,-43.405,MG,Conceição Do Mato Dentro,BAIXO,MÉDIO
+DIQUE DO BICHENTO IIIA,Companhia Siderúrgica Nacional SA,-20.485,-43.933,MG,Congonhas,BAIXO,MÉDIO
+DIQUE DO ENGENHO,Nacional Minerios S/A,-20.456,-43.894,MG,Ouro Preto,BAIXO,MÉDIO
+Dique do Esmeril I,Companhia Siderúrgica Nacional SA,-20.47,-43.93600000000001,MG,Congonhas,BAIXO,BAIXO
+DIQUE DO ESMERIL IV,Companhia Siderúrgica Nacional SA,-20.485,-43.955,MG,Congonhas,BAIXO,ALTO
+DIQUE FERNANDINHO,Vale S A,-20.183,-43.858999999999995,MG,Nova Lima,MÉDIO,BAIXO
+DIQUE II,Vale S A,-20.153,-43.888000000000005,MG,Nova Lima,BAIXO,MÉDIO
+DIQUE III,Vale S A,-20.156,-43.887,MG,Nova Lima,BAIXO,MÉDIO
+Dique Lisa,Vallourec Mineração Ltda.,-20.15,-43.964,MG,Nova Lima,BAIXO,ALTO
+DIQUE MINERVINO (CAUÊ),Vale S A,-19.612000000000002,-43.208,MG,Itabira,BAIXO,ALTO
+Dique Norte PDE - 01,GERDAU AÇOMINAS S.A.,-20.301,-43.922,MG,Itabirito,BAIXO,BAIXO
+Dique Oeste,Mineração Usiminas S.a.,-20.167,-44.45,MG,Itatiaiuçu,BAIXO,ALTO
+DIQUE PARACATU,Vale S A,-20.118,-43.413999999999994,MG,Catas Altas,BAIXO,MÉDIO
+DIQUE PDE FOSFOROSO (Alegria),Vale S A,-20.159000000000002,-43.468999999999994,MG,Mariana,BAIXO,MÉDIO
+DIQUE QUÉIAS,COMPANHIA DE MINERAÇÃO SERRA AZUL - COMISA,-20.127,-44.316,MG,Brumadinho,BAIXO,ALTO
+DIQUE QUINZINHO (Minas do Meio),Vale S A,-19.607,-43.257,MG,Itabira,BAIXO,ALTO
+DIQUE RIO DO PEIXE,Vale S A,-19.671,-43.242,MG,Itabira,BAIXO,MÉDIO
+DIQUE TRÊS FONTES (Minas do Meio),Vale S A,-19.622,-43.233999999999995,MG,Itabira,BAIXO,ALTO
+Dique Unidade I - Dique MBL,Mineração Usiminas S.a.,-20.162,-44.458,MG,Itaúna,BAIXO,BAIXO
+E (Mina Barreiro),Vale Fertilizantes S A,-19.653,-46.953,MG,Araxá,BAIXO,ALTO
+Finos de CDS I,ANGLOGOLD  ASHANTI CÓRREGO DO SÍTIO MINERAÇÃO S.A.,-20.019000000000002,-43.493,MG,Santa Bárbara,BAIXO,ALTO
+Itamarati de Minas,COMPANHIA BRASILEIRA DE ALUMINIO,-21.455,-42.871,MG,Itamarati De Minas,BAIXO,ALTO
+Malaquias,"NIKI MINERAÇÃO, COMÉRCIO E EXPORTAÇÃO LTDA.",-19.543,-43.086000000000006,MG,Antônio Dias,MÉDIO,BAIXO
+Marçu,Nacional de Grafite Ltda,-15.889000000000001,-41.06,MG,Pedra Azul,BAIXO,MÉDIO
+MIRAÍ/MG,COMPANHIA BRASILEIRA DE ALUMINIO,-21.061999999999998,-42.56399999999999,MG,Miraí,BAIXO,ALTO
+Moita,Mineração Serras do Oeste Ltda,-19.936,-43.646,MG,Caeté,BAIXO,ALTO
+Pilha Barragem,EXTRATIVA MINERAL LTDA,-20.112000000000002,-43.908,MG,Nova Lima,BAIXO,BAIXO
+Rancho Casca,Nacional de Grafite Ltda,-15.919,-41.038999999999994,MG,Pedra Azul,BAIXO,ALTO
+Rapaunha,ANGLOGOLD  ASHANTI CÓRREGO DO SÍTIO MINERAÇÃO S.A.,-19.965,-43.841,MG,Nova Lima,BAIXO,ALTO
+RG2 E,Mineração Serras do Oeste Ltda,-19.957,-43.628,MG,Caeté,MÉDIO,BAIXO
+RG2W,Mineração Serras do Oeste Ltda,-19.958,-43.63399999999999,MG,Caeté,MÉDIO,ALTO
+Santa Bárbara,Vallourec Mineração Ltda.,-20.162,-44.006,MG,Brumadinho,BAIXO,ALTO
+SANTO ANTÔNIO,"NIKI MINERAÇÃO, COMÉRCIO E EXPORTAÇÃO LTDA.",-19.535,-43.03,MG,Antônio Dias,MÉDIO,BAIXO
+Tanque Específico IX B,KINROSS BRASIL MINERAÇÃO S. A.,-17.175,-46.881,MG,Paracatu,BAIXO,MÉDIO
+Tanque Específico X,KINROSS BRASIL MINERAÇÃO S. A.,-17.177,-46.886,MG,Paracatu,BAIXO,MÉDIO
+Tanque Específico XI,KINROSS BRASIL MINERAÇÃO S. A.,-17.174,-46.88399999999999,MG,Paracatu,BAIXO,MÉDIO
+Tanque Específico XII,KINROSS BRASIL MINERAÇÃO S. A.,-17.182000000000002,-46.882,MG,Paracatu,BAIXO,MÉDIO
+Turmalina,MINERAÇÃO TURMALINA LTDA.,-19.746,-44.873999999999995,MG,Conceição Do Pará,BAIXO,ALTO
+Volta Grande 1,AMG MINERAÇÃO S.A,-21.086,-44.586999999999996,MG,Nazareno,BAIXO,ALTO
+Volta Grande 2,AMG MINERAÇÃO S.A,-21.088,-44.589,MG,Nazareno,BAIXO,ALTO
+B1,Mineração Marsil Ltda.,-19.55,-43.022,MG,Antônio Dias,no data,no data
+B1,Cimento Tupi,-20.903000000000002,-44.815,MG,Carnaiba,no data,no data
+B3,Mineração Marsil Ltda.,-19.548,-43.022,MG,Antônio Dias,no data,no data
+Bacia 01,Arcelormittal Brasil S.a,-19.785,-43.192,MG,Bela Vista De Minas,no data,no data
+Bacia 07,Arcelormittal Brasil S.a,-19.783,-43.183,MG,Bela Vista De Minas,no data,no data
+Bacia 08,Arcelormittal Brasil S.a,-19.785,-43.18,MG,Bela Vista De Minas,no data,no data
+Bacia 09,Arcelormittal Brasil S.a,-19.776,-43.206,MG,Bela Vista De Minas,no data,no data
+Bacia 15,Arcelormittal Brasil S.a,-19.776,-43.192,MG,Bela Vista De Minas,no data,no data
+Bacia 16,Arcelormittal Brasil S.a,-19.788,-43.173,MG,Bela Vista De Minas,no data,no data
+Bacia 17,Arcelormittal Brasil S.a,-19.785,-43.18,MG,Bela Vista De Minas,no data,no data
+Bacia de Contenção de Finos PDE-A Norte,GERDAU AÇOMINAS S.A.,-20.278,-43.931000000000004,MG,Itabirito,no data,no data
+Bacia de Contenção de Finos PDE-A Sul,GERDAU AÇOMINAS S.A.,-20.283,-43.927,MG,Itabirito,no data,no data
+BAIA 5 VIGA,Ferrous Resources do Brasil Sa,-20.496,-43.917,MG,Congonhas,no data,no data
+BARRAGEM  1,COMPANHIA MINERADORA DO PIROCLORO DE ARAXÁ,-19.659000000000002,-46.927,MG,Araxá,no data,no data
+BARRAGEM  USINA BENEFICIAMENTO L7 - IIB,Magnesita Refratários SA,-19.41,-45.043,MG,Uberaba,no data,no data
+Barragem 02,Companhia Siderúrgica Nacional SA,-20.319000000000003,-44.589,MG,Arcos,no data,no data
+Barragem 1 - Contenção,CONSTRUTORA MARTINS LANNA LTDA,-19.865,-44.093999999999994,MG,Contagem,no data,no data
+Barragem 1 - Decantação,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.379,-43.916000000000004,MG,Itabirito,no data,no data
+Barragem 2 - Captação,CONSTRUTORA MARTINS LANNA LTDA,-19.875999999999998,-44.101000000000006,MG,Contagem,no data,no data
+Barragem 2 - Decantação,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.378,-43.916000000000004,MG,Itabirito,no data,no data
+Barragem 3A - Sedimentação,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.378,-43.916000000000004,MG,Itabirito,no data,no data
+Barragem 3B - Sedimentação,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.378,-43.915,MG,Itabirito,no data,no data
+Barragem 4 - Acumulação,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.378,-43.915,MG,Itabirito,no data,no data
+Barragem 5 - Captação,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.374000000000002,-43.92100000000001,MG,Itabirito,no data,no data
+Barragem 6 - Dique Filtrante,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.377,-43.913000000000004,MG,Itabirito,no data,no data
+Barragem 7 - Dique Filtrante,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.38,-43.917,MG,Itabirito,no data,no data
+Barragem 8 - Dique Filtrante,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.38,-43.919,MG,Itabirito,no data,no data
+Barragem 9 - Dique Filtrante,MSM - MINERAÇÃO SERRA DA MOEDA LTDA,-20.381,-43.92100000000001,MG,Itabirito,no data,no data
+BARRAGEM ATHAYDE,Vale S A,-20.179000000000002,-43.607,MG,Santa Bárbara,no data,no data
+BARRAGEM B2 - DIQUE  IRANIL MANGABEIRAS,IMA - INDÚSTRIA DE MADEIRA IMUNIZADA LTDA.,-19.964000000000002,-43.928999999999995,MG,Belo Horizonte,no data,no data
+Barragem B3,Mineração Geral do Brasil Ltda.,-20.067,-44.023,MG,Brumadinho,no data,no data
+Barragem BA-3,Vale Fertilizantes S A,-19.823,-46.868,MG,Tapira,no data,no data
+BARRAGEM BORRACHUDO,Vale S A,-19.609,-43.263000000000005,MG,Itabira,no data,no data
+BARRAGEM C (UPM),Vale Fertilizantes S A,-18.38,-46.93,MG,Patos De Minas,no data,no data
+Barragem Captação,Vale S A,-20.158,-43.468,MG,No Data,no data,no data
+BARRAGEM CAPTAÇÃO CÓRREGO DAS ALMAS (Barr. água),Vale S A,-20.158,-43.468,MG,Mariana,no data,no data
+Barragem Captação de Água,Mineração Usiminas S.a.,-20.166,-44.45,MG,Itatiaiuçu,no data,no data
+BARRAGEM CB-3 (Barragem de água),Vale S A,-20.413,-43.873999999999995,MG,Ouro Preto,no data,no data
+Barragem da Grota,SAFM MINERAÇÃO LTDA,-20.269000000000002,-43.893,MG,Itabirito,no data,no data
+Barragem de Aredes,SAFM MINERAÇÃO LTDA,-20.276,-43.898,MG,Itabirito,no data,no data
+Barragem de Contenção de Sólidos Carreados,EXTRATIVA MINERAL LTDA,-20.111,-43.903,MG,Nova Lima,no data,no data
+BARRAGEM DO LAGARTO,Companhia Siderúrgica Nacional SA,-20.451,-43.906000000000006,MG,Congonhas,no data,no data
+BARRAGEM DO PRATA,Vale S A,-20.412,-43.865,MG,Ouro Preto,no data,no data
+BARRAGEM ECOLÓGICA 2,Nacional Minerios S/A,-20.159000000000002,-43.843,MG,Rio Acima,no data,no data
+Barragem Freitas,Vale S A,-20.432000000000002,-43.849,MG,No Data,no data,no data
+Barragem Mata Porcos,Vale S A,-20.386,-43.858000000000004,MG,No Data,no data,no data
+BARRAGEM MENEZES I (Córrego do Meio),Vale S A,-20.119,-44.138999999999996,MG,Brumadinho,no data,no data
+BARRAGEM POCILGA,Vale S A,-20.185,-43.606,MG,Santa Bárbara,no data,no data
+BARRAGEM POÇO FUNDO,Companhia Siderúrgica Nacional SA,-20.451,-43.898,MG,Congonhas,no data,no data
+Barragem Serraria,Vale S A,-19.613,-43.20399999999999,MG,Itabira,no data,no data
+BARRAGEM SERRINHA,Ferrous Resources do Brasil Sa,-20.174,-43.976000000000006,MG,Brumadinho,no data,no data
+BARRAGEM TROVÕES (Barragem de água),Vale S A,-20.169,-43.861000000000004,MG,Nova Lima,no data,no data
+BARRAGEM USINA BENEFICIAMENTO ESPONGILITO - IVA,Magnesita Refratários SA,-19.41,-45.043,MG,Uberaba,no data,no data
+BARRAGEM USINA BENEFICIAMENTO ESPONGILITO - IVB,Magnesita Refratários SA,-19.41,-45.043,MG,Uberaba,no data,no data
+BARRAGEM USINA BENEFICIAMENTO L7 - IIA,Magnesita Refratários SA,-19.41,-45.043,MG,Uberaba,no data,no data
+BARRAGEM USINA BENEFICIAMENTO L8 - IIIA,Magnesita Refratários SA,-19.41,-45.043,MG,Uberaba,no data,no data
+BARRAGEM USINA BENEFICIAMENTO L8 - IIIB,Magnesita Refratários SA,-19.409000000000002,-45.043,MG,Uberaba,no data,no data
+Barragem Vale do Jacaré,MINERAÇÃO VALE DO JACARE LTDA,-18.133,-43.972,MG,Buenópolis,no data,no data
+BARRAGEM/BARRAMENTO,EXTRATIVA MINERAL LTDA,-20.11,-43.903999999999996,MG,Nova Lima,no data,no data
+Batatinha,CIMECA - COMÉRCIO E INDÚSTRIA DE MINÉRIOS E METAIS CAXAMBU LTDA.,-19.889,-43.19,MG,Rio Piracicaba,no data,no data
+CONJUNTO DE BAIAS VIGA,Ferrous Resources do Brasil Sa,-20.495,-43.918,MG,Congonhas,no data,no data
+D-1,Mineração Pedra Menina Ltda,-17.969,-43.168,MG,Senador Modestino Gonçalves,no data,no data
+D-2,Mineração Pedra Menina Ltda,-17.969,-43.168,MG,Senador Modestino Gonçalves,no data,no data
+D-3,Mineração Pedra Menina Ltda,-17.969,-43.168,MG,Senador Modestino Gonçalves,no data,no data
+Dique - Pilha de Rejeito,EXTRATIVA MINERAL LTDA,-20.111,-43.909,MG,Nova Lima,no data,no data
+Dique 01 - Córrego do Meio,Vale S A,-19.855999999999998,-43.798,MG,Sabará,no data,no data
+Dique 01 - Serra Azul,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.12,-44.386,MG,Mateus Leme,no data,no data
+Dique 01 de Terra,ARCELORMITTAL MINERAÇÃO SERRA AZUL S.A.,-20.137999999999998,-44.401,MG,Itatiaiuçu,no data,no data
+DIQUE 01 PDE 01,Vale S A,-19.854,-43.794,MG,Sabará,no data,no data
+Dique 01 Serra Azul - Dique Vai e Volta 1,Mineração Usiminas S.a.,-20.129,-44.42,MG,Mateus Leme,no data,no data
+DIQUE 02 - GONGO SOCO,Vale S A,-19.973,-43.604,MG,Barão De Cocais,no data,no data
+Dique 02 - Pitangui,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.124000000000002,-44.376000000000005,MG,Mateus Leme,no data,no data
+Dique 02 Serra Azul - Dique Vai e Volta 2,Mineração Usiminas S.a.,-20.13,-44.422,MG,Itatiaiuçu,no data,no data
+Dique 03 Serra Azul - Dique Vai e Volta 3,Mineração Usiminas S.a.,-20.13,-44.426,MG,Itatiaiuçu,no data,no data
+Dique 04,COMPANHIA DE MINERAÇÃO SERRA AZUL - COMISA,-20.119,-44.324,MG,Brumadinho,no data,no data
+Dique 06,Mineração Usiminas S.a.,-20.162,-44.456,MG,Itatiaiuçu,no data,no data
+Dique 06 - Véu da Noiva Jusante,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.131,-44.376000000000005,MG,Itatiaiuçu,no data,no data
+Dique 08 - Pátio CMC,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.134,-44.379,MG,Itatiaiuçu,no data,no data
+Dique 1,SAFM MINERAÇÃO LTDA,-20.274,-43.898999999999994,MG,Itabirito,no data,no data
+Dique 105 II,Vale S A,-19.629,-43.24,MG,Itabira,no data,no data
+Dique 11,Vale S A,-19.866,-43.786,MG,Sabará,no data,no data
+Dique 12,Vale S A,-19.867,-43.786,MG,Sabará,no data,no data
+Dique 13,Vale S A,-19.868,-43.787,MG,Sabará,no data,no data
+Dique 13 - Pains,Mineração Usiminas S.a.,-20.124000000000002,-44.433,MG,Itatiaiuçu,no data,no data
+Dique 14,Mineração Usiminas S.a.,-20.162,-44.446999999999996,MG,Itatiaiuçu,no data,no data
+Dique 2,SAFM MINERAÇÃO LTDA,-20.274,-43.901,MG,Itabirito,no data,no data
+Dique 2 de Concreto,ARCELORMITTAL MINERAÇÃO SERRA AZUL S.A.,-20.139,-44.401,MG,Itatiaiuçu,no data,no data
+Dique 3,SAFM MINERAÇÃO LTDA,-20.268,-43.901,MG,Itabirito,no data,no data
+Dique 3 - Leira Véu de Noiva,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.127,-44.375,MG,Itatiaiuçu,no data,no data
+Dique 4 - Santanense,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.128,-44.372,MG,Itatiaiuçu,no data,no data
+Dique 8,Arcelormittal Brasil S.a,-19.784000000000002,-43.18,MG,Bela Vista De Minas,no data,no data
+DIQUE A - GONGO SOCO,Vale S A,-19.949,-43.586999999999996,MG,Barão De Cocais,no data,no data
+Dique Asfalto,Mineração Usiminas S.a.,-20.165,-44.451,MG,Itatiaiuçu,no data,no data
+DIQUE B - GONGO SOCO,Vale S A,-19.947,-43.583,MG,Barão De Cocais,no data,no data
+DIQUE B1 MIGUEL BURNIER,IMA - INDÚSTRIA DE MADEIRA IMUNIZADA LTDA.,-20.456,-43.75,MG,Ouro Preto,no data,no data
+DIQUE B2 MIGUEL BURNIER,IMA - INDÚSTRIA DE MADEIRA IMUNIZADA LTDA.,-20.456,-43.75,MG,Ouro Preto,no data,no data
+DIQUE B3 MIGUEL BURNIER,IMA - INDÚSTRIA DE MADEIRA IMUNIZADA LTDA.,-20.458,-43.733999999999995,MG,Ouro Preto,no data,no data
+Dique BIV-3 - Dique Hércules,Mineração Usiminas S.a.,-20.155,-44.441,MG,Itatiaiuçu,no data,no data
+DIQUE C - GONGO SOCO,Vale S A,-19.938,-43.583999999999996,MG,Barão De Cocais,no data,no data
+DIQUE CATA BRANCA,Vale S A,-20.233,-43.856,MG,Itabirito,no data,no data
+Dique Couves[ MUSA],Mineração Usiminas S.a.,-20.155,-44.434,MG,Itatiaiuçu,no data,no data
+Dique da Divisa,Mineração Usiminas S.a.,-20.136,-44.405,MG,Itatiaiuçu,no data,no data
+DIQUE DA FAZENDINHA,Vale S A,-19.972,-43.608000000000004,MG,Barão De Cocais,no data,no data
+Dique da Oficina,Mineração Usiminas S.a.,-20.125,-44.41,MG,Itatiaiuçu,no data,no data
+Dique da Oficina II,Mineração Usiminas S.a.,-20.125999999999998,-44.401,MG,Mateus Leme,no data,no data
+Dique da Pilha Sul,FERRO + MINERAÇÃO S/A,-20.436,-43.872,MG,Congonhas,no data,no data
+DIQUE DAS COBRAS,Vale S A,-20.133,-43.41,MG,Catas Altas,no data,no data
+Dique de Concreto,MINERITA - MINÉRIOS ITAÚNA LTDA.,-20.131,-44.376999999999995,MG,Itatiaiuçu,no data,no data
+Dique de contenção de finos,PEDRAS CONGONHAS EXTRAÇÃO ARTE INDUSTRIA LTDA,-20.116,-43.873999999999995,MG,Nova Lima,no data,no data
+DIQUE DE PÉ DE PILHA/EMESA,Empresa de Mineração Esperança Sa,-20.112000000000002,-44.22,MG,Brumadinho,no data,no data
+DIQUE DO BATATEIRO DE BAIXO,Companhia Siderúrgica Nacional SA,-20.477999999999998,-43.896,MG,Congonhas,no data,no data
+DIQUE DO PATRIMÔNIO,Vale S A,-19.959,-43.586999999999996,MG,Barão De Cocais,no data,no data
+Dique do Retão,Vale S A,-20.241,-43.50899999999999,MG,Mariana,no data,no data
+DIQUE DOS INGLESES,Vale S A,-19.965,-43.586999999999996,MG,Barão De Cocais,no data,no data
+Dique Flotação,Mineração Usiminas S.a.,-20.146,-44.405,MG,Itatiaiuçu,no data,no data
+Dique Intermediário,Mineração Usiminas S.a.,-20.159000000000002,-44.435,MG,Itatiaiuçu,no data,no data
+DIQUE IPOEMA,Vale S A,-19.612000000000002,-43.256,MG,Itabira,no data,no data
+Dique IV,Mineração Geral do Brasil Ltda.,-20.116,-44.298,MG,Brumadinho,no data,no data
+DIQUE LAVRA AZUL,Vale S A,-20.118,-43.407,MG,Catas Altas,no data,no data
+Dique Leste I,Mineração Usiminas S.a.,-20.121,-44.367,MG,Mateus Leme,no data,no data
+Dique Leste II,Mineração Usiminas S.a.,-20.11,-44.333999999999996,MG,Igarapé,no data,no data
+Dique Leste III,Mineração Usiminas S.a.,-20.116,-44.367,MG,Mateus Leme,no data,no data
+Dique Longitudinal,SAFM MINERAÇÃO LTDA,-20.271,-43.898999999999994,MG,Itabirito,no data,no data
+Dique Mazano,Mineração Usiminas S.a.,-20.14,-44.417,MG,Itatiaiuçu,no data,no data
+Dique Mazano II,Mineração Usiminas S.a.,-20.143,-44.417,MG,Itatiaiuçu,no data,no data
+Dique Mineira,Mineração Usiminas S.a.,-20.15,-44.435,MG,Itatiaiuçu,no data,no data
+DIQUE PDE PERMANENTE I,Vale S A,-20.184,-43.438,MG,Mariana,no data,no data
+DIQUE PDE PERMANENTE II - FASE I,Vale S A,-20.207,-43.45399999999999,MG,Mariana,no data,no data
+DIQUE PDE TEMPORÁRIO II,Vale S A,-20.215,-43.43600000000001,MG,Mariana,no data,no data
+Dique Subestação,Vale S A,-19.989,-43.347,MG,Itabira,no data,no data
+GABIÕES,Empresa de Mineração Esperança Sa,-20.116,-44.218,MG,Brumadinho,no data,no data
+Gamelas,Shinobu Kuribayashi,-18.065,-47.281000000000006,MG,Coromandel,no data,no data
+Gerais,MINERAÇÕES GERAIS LTDA,-19.582,-44.411,MG,Inhaúma,no data,no data
+Modulo 3,VOTORANTIM METAIS ZINCO S/A,-17.972,-46.843,MG,Vazante,no data,no data
+PDE Engano,Vale S A,-20.338,-43.425,MG,No Data,no data,no data
+Piteiras,Piteiras Mineração Ltda.,-19.692,-43.113,MG,Itabira,no data,no data
+poço,Paulo Gerson Jardim de Souza,-20.031,-44.635,MG,Itaúna,no data,no data
+Rejeito,Mineração Sanguinete Ltda,-18.007,-43.765,MG,Gouveia,no data,no data
+Rejeito e Recirculação de água,Piteiras Mineração Ltda.,-19.672,-43.129,MG,Itabira,no data,no data
+reservatório,MINERAÇÃO AREIA BRANCA LTDA,-21.85,-43.673,MG,Santa Bárbara Do Monte Verde,no data,no data
+SANTA TERESA,Novelis do Brasil Ltda,-21.467,-42.886,MG,Descoberto,no data,no data
+Tanque 3,Quartzito do Brasil Ltda - EPP,-20.386,-43.45399999999999,MG,Mariana,no data,no data
+TQ-1,SAINT-GOBAIN DO BRASIL PRODUTOS INDUSTRIAIS E PARA CONSTRUÇÃO LTDA.,-19.891,-43.285,MG,São Gonçalo Do Rio Abaixo,no data,no data
+TQ-2,SAINT-GOBAIN DO BRASIL PRODUTOS INDUSTRIAIS E PARA CONSTRUÇÃO LTDA.,-19.892,-43.285,MG,São Gonçalo Do Rio Abaixo,no data,no data
+TRÊS ILHAS,SAGODI MINERAÇÃO LTDA,-18.412,-44.753,MG,São Gonçalo Do Abaeté,no data,no data
+Gafanhoto,CEMIG Geração e Transmissão S.A.,-20.1,-44.848,MG,Divinópolis,BAIXO,ALTO
+Cajuru,CEMIG Geração e Transmissão S.A.,-20.238,-44.754,MG,Carmo Do Cajuru,MÉDIO,ALTO
+Retiro Baixo,Retiro Baixo Energética S.A.,-18.875,-44.781000000000006,MG,Curvelo,MÉDIO,ALTO
+Fundão,,-20.206,-43.467,MG,Mariana,no data,no data
