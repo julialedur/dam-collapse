@@ -42,7 +42,8 @@ header .lead {
   color: white;
   font-size: 16px;
   text-align: left;
-  transform: translateX(-18%) 
+  transform: translateX(-18%);
+  vertical-align: top;
 
 }
 
@@ -95,6 +96,15 @@ header h1 {
 
 }
 
+.black-bg {
+      height: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+}
+
 
 
 /*.content {
@@ -109,6 +119,7 @@ header h1 {
 max-width: 975px; 
 }
           .centered {
+
             position: absolute;
             top: 30%;
             left: 20%;
@@ -173,8 +184,6 @@ max-width: 975px;
             font-size: 12px;
             font-weight: lighter;
           }
-
-
 
           #chart-1 .axis line {
             stroke: #999;
@@ -265,6 +274,10 @@ max-width: 975px;
 
           .step > h2, .step > h3 {
             background: rgba(255,255,255,0.9);
+          }
+
+          .step p {
+            color:lightgray;
           }
 
           /* Code to customize the tooltip */
@@ -411,7 +424,8 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 
-    
+
+
 hr { 
   display: block;
   margin-top: 0.2em;

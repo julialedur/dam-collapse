@@ -9,8 +9,8 @@ const margin = {
   left: 30
 }
 
-const width = 900 - margin.left - margin.right
-const height = 750 - margin.top - margin.bottom
+const width = 1000 - margin.left - margin.right
+const height = 700 - margin.top - margin.bottom
 
 const svg = d3
   .select('#map_chart')
@@ -99,11 +99,15 @@ function ready ([json, datapoints]) {
         return 7
       }
     })
+    .attr('dx', d => {
+      if (d.properties.nome === 'Brumadinho') {
+        return 10
+      }
+    })
     .attr('text-anchor', 'right')
     .attr('alignment-baseline', 'middle')
+    .style('visibility', 'hidden')
     .attr('font-size', 3)
-    .style('visibility', 'visible')
-    .style('point-events', 'none')
 
   svg
     .selectAll('.rect')
@@ -149,9 +153,6 @@ function ready ([json, datapoints]) {
         .duration(500)
         .style('opacity', 0)
     })
-
-
-  // legend
 
   // scrolling part
   // initial blank map
@@ -242,11 +243,11 @@ function ready ([json, datapoints]) {
       .transition()
       .duration(200)
       .attr('opacity', 0)
-    svg
-      .selectAll('.brumadinho')
-      .transition()
-      .duration(200)
-      .attr('opacity', 1)
+    // svg
+    //   .selectAll('.brumadinho')
+    //   .transition()
+    //   .duration(200)
+    //   .attr('opacity', 1)
   })
 
   // showing all the dam in MG on potential dmage
@@ -264,12 +265,11 @@ function ready ([json, datapoints]) {
       .attr('stroke', d => colorScale(d.risk_category))
 
     svg
-      .raise()
       .selectAll('.label')
       .style('visibility', 'visible')
       .transition()
       .duration(200)
-      .attr('opacity', 1)
+      .attr('opacity', 0)
   })
 
   // showing all the dam owned by Vale
@@ -311,6 +311,8 @@ function ready ([json, datapoints]) {
     console.log('Rendering')
     let screenWidth = svg.node().parentNode.parentNode.offsetWidth
     let screenHeight = window.innerHeight
+    // let screenHeight = window.innerHeight
+    // let screenWidth = svg.node().parentNode.parentNode.offsetWidth
     let newWidth = screenWidth - margin.left - margin.right
     let newHeight = screenHeight - margin.top - margin.bottom
 
@@ -337,19 +339,19 @@ function ready ([json, datapoints]) {
       })
 
     // If it's really small, resize the rect size
-    if (newHeight < 600) {
+    if (newHeight < 400) {
       svg.selectAll('.dam').attr('width', 3).attr('height', 3)
     } else {
       svg.selectAll('.dam').attr('width', 8).attr('height', 8)
     }
 
-    if (newWidth < 600) {
+    if (newWidth < 200) {
       svg.selectAll('.dam').attr('width', 3).attr('height', 3)
     } else {
       svg.selectAll('.dam').attr('width', 8).attr('height', 8)
     }
   }
 
-  window.addEventListener('resize', debounce(render, 1000))
+  window.addEventListener('resize', debounce(render, 400))
   render()
 }

@@ -15,14 +15,6 @@
   </head>
   <body>
 
-<!--             <div id="myVideo">
-                <video autoplay muted loop playsinline source src="images/dam-collapse-header2.mp4" type="video/mp4"> </video>
-            </div> 
-
-            <div class="overlay content">
-              <p>Content above your video</p>
-            </div>  -->
-
 <header>
   <div class="overlay"></div>
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -88,7 +80,7 @@
           </div>
       </div>
       <div class="row justify-content-center"> 
-                <video controls width="800" height="600"> <source src="images/dam-collapse-annotated.mp4" type="video/mp4">
+                <video  width="800" height = '600' controls> <source src="images/dam-collapse-annotated.mp4" type="video/mp4"></video>
       </div>
 
 
@@ -123,7 +115,7 @@
         </div>
     </div><br><br><br><br>
 
-     <div class="col-sm-12">
+     <div class="col-sm-12" class="slide">
             <iframe frameborder="0" class="juxtapose" width="100%" height="648" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=14481e34-2979-11e9-9dba-0edaf8f81e27"></iframe>
         </div>    
          
@@ -153,8 +145,8 @@
 
 
 <!-- scrollytelling map   --> 
-      <div style="background-color: black">
-        <div  class="container black-bg"> 
+      <div style="background-color: black" class="h-100">
+        <div  class="container black-bg h-100"> 
 <!--           <div class="col-lg-8"> -->
           <div class="col-lg-8 sticky">
               <div id="map_chart"></div>
@@ -197,7 +189,7 @@
          </div>
       </div> 
 
-     <!-- Slideshow container -->
+<!-- Slideshow container -->
       <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
@@ -262,6 +254,7 @@
       <script>
         var slideIndex = 1
         showSlides(slideIndex)
+        
 
         function plusSlides(n) {
           showSlides(slideIndex += n)
@@ -286,6 +279,8 @@
           slides[slideIndex-1].style.display = "block"  
           dots[slideIndex-1].className += " active"
         }
+
+
       </script> 
 
 
@@ -295,6 +290,7 @@
     <script src="scrollytelling.js"></script>
     <script src="enter-view.js"></script>
     <script src="graphic-progress.js"></script>
+    <script src="slider.js"></script>
 
    </body>
 </html>
