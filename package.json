@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir docs --public-url /dam-collapse-brazil"
+    "build": "parcel build src/index.html --out-dir docs --public-url /dam-collapse"
   },
   "jest": {
     "setupFiles": [
