@@ -434,3 +434,50 @@ hr {
   width: 100%;
   text-align: center;
 }
+
+/* Script ai to html */
+
+#g-dam-new-box .g-artboard {
+  margin:0 auto;
+}
+#g-dam-new-box .g-artboard p {
+  margin:0;
+}
+.g-aiAbs {
+  position:absolute;
+}
+.g-aiImg {
+  display:block;
+  width:100% !important;
+}
+.g-aiSymbol {
+  position: absolute;
+  box-sizing: border-box;
+}
+.g-aiPointText p { white-space: nowrap; }
+#g-dam-new {
+  position:relative;
+  overflow:hidden;
+}
+#g-dam-new p {
+  font-family:Source Sans Pro,arial,helvetica,sans-serif;
+  font-size:16px;
+  line-height:19px;
+  height:auto;
+  filter:alpha(opacity=100);
+  -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity:1;
+  letter-spacing:-0.05em;
+  text-align:left;
+  color:rgb(255,255,255);
+  text-shadow: 0.7px 0.7px black;
+  text-transform:none;
+  padding-bottom:0;
+  padding-top:0;
+  mix-blend-mode:normal;
+  font-style:normal;
+}
+#g-dam-new .g-pstyle0 {
+  height:19px;
+  text-align:center;
+}
