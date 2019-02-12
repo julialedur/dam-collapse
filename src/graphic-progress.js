@@ -27,12 +27,12 @@ import * as topojson from 'topojson'
     {
       'name': 'southamerica-farther',
       'filePath': require('./images/zoom1.jpg'),
-      'cornerCoords': [[ -70.200329549, -2.669576040 ], [ -29.526529018, -24.861292140 ]]
+      'cornerCoords': [[ -67.690175002, -2.607662630 ], [ -30.146320264, -25.282335442 ]]
     },
     {
       'name': 'southamerica-closer',
-      'filePath': require('./images/zoom2.jpg'),
-      'cornerCoords': [[ -54.468572845, -13.021215323 ], [ -34.379665248, -23.796016144 ]]
+      'filePath': require('./images/minas.jpg'),
+      'cornerCoords': [[ -54.295456679, -12.976140692 ], [ -34.728365981, -24.441264325 ]]
     },
     {
       'name': 'lake',
