@@ -26,21 +26,31 @@ import * as topojson from 'topojson'
   const layers = [
     {
       'name': 'southamerica-farther',
+      'filePath': require('./images/zoom-big.png'),
+      'cornerCoords': [[ -85.419276845, 10.427299400 ], [ -33.088919943, -56.482344413 ]]
+    },
+    {
+      'name': 'southamerica-closer',
       'filePath': require('./images/zoom1.jpg'),
       'cornerCoords': [[ -67.690175002, -2.607662630 ], [ -30.146320264, -25.282335442 ]]
     },
     {
-      'name': 'southamerica-closer',
+      'name': 'lake',
       'filePath': require('./images/minas.jpg'),
-      'cornerCoords': [[ -54.295456679, -12.976140692 ], [ -34.728365981, -24.441264325 ]]
+      'cornerCoords': [[ -51.239915636, -13.157095254 ], [ -36.210378853, -24.492786005 ]]
     },
     {
-      'name': 'lake',
+      'name': 'lake-closer',
       'filePath': require('./images/zoom3.jpg'),
       'cornerCoords': [[ -44.512003310, -19.936271219 ], [ -43.848537952, -20.338210921 ]]
     },
     {
-      'name': 'lake-closer',
+      'name': 'dam-closer',
+      'filePath': require('./images/zoom-dam.png'),
+      'cornerCoords': [[ -44.156604367, -20.103413442 ], [ -44.078279550, -20.144902001 ]]
+    },
+    {
+      'name': 'dam',
       'filePath': require('./images/zoom4.jpg'),
       'cornerCoords': [[ -44.129230197, -20.115610284 ], [ -44.1138004803, -20.124825773 ]]
     }
@@ -263,31 +273,45 @@ import * as topojson from 'topojson'
     },
     {
       slug: 'three',
-      zoom: 18,
+      zoom: 16,
       mobilezoom: 17.0,
       focus: [-44.19972, -20.14333],
       visibleLayers: ['southamerica-farther', 'southamerica-closer', 'lake']
     },
     {
       slug: 'four',
-      zoom: 20,
+      zoom: 18,
       mobilezoom: 18.0,
       focus: [ -44.121389, -20.119722 ],
       visibleLayers: ['southamerica-closer', 'lake', 'lake-closer']
     },
     {
       slug: 'five',
-      zoom: 22,
+      zoom: 18,
       mobilezoom: 18.1,
       focus: [ -44.121389, -20.119722 ],
       visibleLayers: ['lake', 'lake-closer']
     },
     {
       slug: 'six',
-      zoom: 24,
-      mobilezoom: 18.2,
+      zoom: 22,
+      mobilezoom:22,
       focus: [ -44.121389, -20.119722 ],
       visibleLayers: ['lake', 'lake-closer']
+    },
+    {
+      slug: 'seven',
+      zoom: 23,
+      mobilezoom: 23,
+      focus: [ -44.121389, -20.119722 ],
+      visibleLayers: ['lake-closer', 'dam-closer']
+    },
+    {
+      slug: 'eight',
+      zoom: 25,
+      mobilezoom: 25,
+      focus: [ -44.121389, -20.119722 ],
+      visibleLayers: ['dam-closer', 'dam']
     }
   ]
 
@@ -445,6 +469,12 @@ import * as topojson from 'topojson'
 
     d3.select('#step-7').on('progress', function () {
       drawWaypoint('six', d3.event.detail.progress)
+    })
+    d3.select('#step-8').on('progress', function () {
+      drawWaypoint('seven', d3.event.detail.progress)
+    })
+    d3.select('#step-9').on('progress', function () {
+      drawWaypoint('eight', d3.event.detail.progress)
     })
 
     function render () {

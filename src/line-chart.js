@@ -25,6 +25,15 @@ const yPositionScale = d3
   .domain([2400, 3000])
   .range([height, 0])
 
+var area = function (datum, boolean) {
+  return d3.area()
+    .curve(d3.curveBasis)
+    .y0(height)
+    .y1(function (d) { return yPositionScale(d.altitude_feet) })
+    .x(function (d) { return boolean ? xPositionScale(d.distance_miles) : 0 })
+    (datum)
+}
+
 const line = d3
   .line()
   .x(d => {
@@ -64,34 +73,36 @@ function ready (datapoints) {
   // .datum because we only have ONE path
 
   svg
-    .append('path')
+    // .selectAll('.line')
     .datum(datapoints)
+    // .enter()
+    .append('path')
+    .attr('class', 'line')
     .attr('stroke', 'brown')
     .attr('stroke-width', 2)
     .attr('d', line)
+    // .transition()
+    // .duration(1000)
+    // .attrTween('stroke-dasharray', tweenDash)
     .attr('fill', 'none')
     .attr('id', 'mud-line')
-    .transition()
-    .duration(5000)
-    .attrTween('stroke-dasharray', tweenDash)
+    .style('visibility', 'hidden')
+
+  // add the area
+  svg
+    .datum(datapoints)
+    .append('path')
+    .attr('class', 'area')
 
   var mudLine = d3.select('#mud-line')
+
+  // add the circle
   svg
-    .selectAll('circle')
-    .data(datapoints)
-    .enter()
     .append('circle')
-    .attr('fill', 'brown')
-    .attr('r', 3)
-    .attr('cx', d => {
-      return xPositionScale(d.distance_miles)
-    })
-    .attr('cy', d => {
-      return yPositionScale(d.altitude_feet)
-    })
-    .transition()
-    .duration(5000)
-    // .attrTween('transform', translateAlong(mudLine))
+    .attr('fill', 'red')
+    .attr('r', 4)
+    .attr('class', 'circle')
+    .style('visibility', 'hidden')
 
   // Axes labels
 
@@ -120,17 +131,20 @@ function ready (datapoints) {
 
   // Add fill rectangles
 
-  svg.append('g')
-    .selectAll('rect')
-    .data(datapoints)
-    .enter().append('rect')
-    .attr('class', 'highlighter')
-    .attr('y', 0)
-    .attr('x', d => xPositionScale(d.distance_miles))
-    .attr('height', height)
-    .attr('width', xPositionScale(2) - xPositionScale(1))
-    .attr('fill', '#fff880')
-    .attr('opacity', 0.2)
+  // svg.append('g')
+  //   .selectAll('rect')
+  //   .data(datapoints)
+  //   .enter().append('rect')
+  //   .attr('class', 'highlighter')
+  //   // .attr('y', 0)
+  //   .attr('y', function(d) {
+  //     return d.altitude_feet
+  //   })
+  //   .attr('x', d => xPositionScale(d.distance_miles))
+  //   .attr('height', height)
+  //   .attr('width', xPositionScale(2) - xPositionScale(1))
+  //   .attr('fill', '#fff880')
+  //   .attr('opacity', 0.2)
 
   /* Add in your axes */
 
@@ -146,6 +160,89 @@ function ready (datapoints) {
     .append('g')
     .attr('class', 'axis y-axis')
     .call(yAxis)
-}
 
-export { xPositionScale, yPositionScale, line }
+  // steps
+  // d3.select('#blank-graph').on('stepin', () => {
+
+  //   svg
+  //     .selectAll('.line')
+  //     .transition()
+  //     .style('visibility', 'hidden')
+
+  //   svg
+  //     .selectAll('.circle')
+  //     .style('visibility', 'hidden')
+
+  //   svg
+  //     .datum(datapoints)
+  //     .append('path')
+  //     .attr('class', 'area')
+  //     .style('visibility', 'hidden')
+
+  // })
+
+  d3.select('#animated-line').on('stepin', () => {
+    console.log('I am stepinto line')
+    svg
+      .selectAll('.line')
+      .style('visibility', 'visibility')
+
+      // .attr('stroke', 'brown')
+
+      .transition()
+      .duration(2000)
+      .attrTween('stroke-dasharray', tweenDash)
+      // .style('visibility', 'visible')
+      .style('visibility', 'hidden')
+
+    svg
+      .selectAll('.circle')
+      .transition()
+      .duration(2000)
+      .attrTween('transform', translateAlong(mudLine))
+      // .style('visibility', 'visible')
+      .style('visibility', 'hidden')
+
+    svg
+      .selectAll('.area')
+      .attr('d', d => area(d, false))
+      .attr('fill', 'brown')
+      .transition()
+      .duration(2000)
+      .attr('d', d => area(d, true))
+  })
+
+  // function render () {
+  //   console.log('Something happened')
+  //   let screenWidth = svg.node().parentNode.parentNode.offsetWidth
+  //   let screenHeight = window.innerHeight
+  //   let newWidth = screenWidth - margin.left - margin.right
+  //   let newHeight = screenHeight - margin.top - margin.bottom
+
+  //   // Update your SVG
+  //   let actualSvg = d3.select(svg.node().parentNode)
+  //   actualSvg
+  //     .attr('height', newHeight + margin.top + margin.bottom)
+  //     .attr('width', newWidth + margin.left + margin.right)
+
+  //   console.log(actualSvg)
+
+  //   // Update scales (depends on your scales)
+  //   xPositionScale.range([0, newWidth])
+  //   yPositionScale.range([newHeight, 0])
+
+  //   // Reposition/redraw your elements
+
+  //   svg
+  //     .selectAll('.area')
+  //     .attr('d', area)
+
+  //   // Update axes if necessary
+  //   svg.select('.x-axis').call(xAxis)
+  //   svg.select('.y-axis').call(yAxis)
+  // }
+
+  // // Every time the window resizes, run the render function
+  // window.addEventListener('resize', debounce(render, 200))
+  // render()
+}
