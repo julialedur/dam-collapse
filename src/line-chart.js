@@ -114,7 +114,7 @@ function ready (datapoints) {
     .attr('x', 0 - height / 2)
     .attr('dy', '1em')
     .attr('font-family', 'Open Sans')
-    .attr('font-size', 12)
+    .attr('font-size', 13)
     .style('text-anchor', 'middle')
     .text('Altitude (feet)')
 
@@ -126,7 +126,7 @@ function ready (datapoints) {
     .attr('dy', 45)
     .attr('x', width / 2)
     .attr('font-family', 'Open Sans')
-    .attr('font-size', 12)
+    .attr('font-size', 13)
     .text('Distance (miles)')
 
   // Add fill rectangles
@@ -182,12 +182,12 @@ function ready (datapoints) {
   // })
 
   d3.select('#animated-line').on('stepin', () => {
-    console.log('I am stepinto line')
+    console.log('I am stepping into line')
     svg
       .selectAll('.line')
       .style('visibility', 'visibility')
 
-      // .attr('stroke', 'brown')
+    // .attr('stroke', 'brown')
 
       .transition()
       .duration(2000)
@@ -206,11 +206,73 @@ function ready (datapoints) {
     svg
       .selectAll('.area')
       .attr('d', d => area(d, false))
-      .attr('fill', 'brown')
+      .attr('fill', '#993333')
       .transition()
       .duration(2000)
       .attr('d', d => area(d, true))
   })
+
+  // Label collapsed dam
+
+  svg
+    .append('text')
+    .attr('class', 'dam-label')
+    .text('Collapsed dam')
+    .attr('font-family', 'Open Sans')
+    .attr('font-size', 12)
+    .attr('dx', 10)
+    .attr('y', d => yPositionScale(2933))
+    .attr('x', d => xPositionScale(0))
+    .attr('text-anchor', 'start')
+    // .attrTween('transform', translateAlong(mudLine))
+
+  // Label river
+
+  svg
+    .append('text')
+    .attr('class', 'river-label')
+    .text('Paraopeba river')
+    .attr('font-family', 'Open Sans')
+    .attr('font-size', 12)
+    .attr('dx', 10)
+    .attr('y', d => yPositionScale(2450))
+    .attr('x', d => xPositionScale(4.14))
+    .attr('text-anchor', 'start')
+
+  // River line
+
+  svg
+    .append('line')
+    .attr('class', 'riverLine')
+    .attr('stroke', 'gray')
+    .attr('stroke-width', 0.5)
+    .style('stroke-dasharray', ('3, 3'))
+    .attr('x1', xPositionScale(4.14))
+    .attr('y1', height)
+    .attr('x2', xPositionScale(4.14))
+    .attr('y2', 0)
+
+  // Arrow
+
+  svg.append('line')
+    .attr('x1', xPositionScale(4.14))
+    .attr('y1', 350)
+    .attr('x2', xPositionScale(5.5))
+    .attr('y2', 350)
+    .attr('stroke-width', 0.5)
+    .attr('stroke', 'gray')
+    .attr('marker-end', 'url(#triangle)')
+
+  svg.append('svg:defs').append('svg:marker')
+    .attr('id', 'triangle')
+    .attr('refX', 6)
+    .attr('refY', 6)
+    .attr('markerWidth', 25)
+    .attr('markerHeight', 25)
+    .attr('orient', 'auto')
+    .append('path')
+    .attr('d', 'M 0 0 12 6 0 12 3 6')
+    .style('fill', 'gray')
 
   // function render () {
   //   console.log('Something happened')

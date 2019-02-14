@@ -73,7 +73,8 @@ function ready ([json, datapoints]) {
     .append('path')
     .attr('class', 'cities')
     .attr('d', path)
-    .attr('stroke', 'lightgray')
+    .attr('stroke', '#e6e6e6')
+    .attr('stroke-width', 0.6)
     .attr('fill', 'white')
 
   svg
@@ -81,13 +82,19 @@ function ready ([json, datapoints]) {
     .data(cities.features)
     .enter()
     .append('text')
+    .attr('font-weight', 200)
+    .attr('letter-spacing', 0.3)
     .attr('class', d => {
       return d.properties.nome.replace(/\s+/g, '-').toLowerCase()
     })
     .classed('label', true)
     .text(d => {
-      if (cityList.indexOf(d.properties.nome) !== -1) {
-        return '•' + d.properties.nome
+      if ((cityList.indexOf(d.properties.nome) !== -1) && (d.properties.nome === 'Governador Valadares')) {
+        return d.properties.nome + ' •'
+      } else if ((cityList.indexOf(d.properties.nome) !== -1) && (d.properties.nome !== 'Governador Valadares')) {
+        return '• ' + d.properties.nome
+      } else {
+        return ' '
       }
     })
     .attr('transform', d => {
@@ -96,7 +103,7 @@ function ready ([json, datapoints]) {
     })
     .attr('dy', d => {
       if (d.properties.nome === 'Mariana') {
-        return 7
+        return 5
       }
     })
     .attr('dx', d => {
@@ -104,7 +111,13 @@ function ready ([json, datapoints]) {
         return 10
       }
     })
-    .attr('text-anchor', 'right')
+    .attr('text-anchor', d => {
+      if (d.properties.nome === 'Governador Valadares') {
+        return 'end'
+      } else {
+        return 'start'
+      }
+    })
     .attr('alignment-baseline', 'middle')
     .style('visibility', 'hidden')
     .attr('font-size', 3)
@@ -122,6 +135,13 @@ function ready ([json, datapoints]) {
       return str.replace(/\s+/g, '-').toLowerCase()
     })
     .classed('dam', true)
+    .attr('id', d => {
+      if ((d.company_name === 'Vale Fertilizantes S A') || (d.company_name === 'Vale S A')) {
+        return 'vale'
+      } else {
+        return 'other'
+      }
+    })
     // .attr('r', 2.3)
     .attr('width', 8)
     .attr('height', 8)
@@ -184,7 +204,7 @@ function ready ([json, datapoints]) {
       .style('visibility', 'visible')
       .attr('opacity', 0.9)
       .attr('r', 3)
-      .attr('stroke', 'red')
+      .attr('stroke', '#993333')
 
     svg
       .selectAll('.label')
@@ -212,7 +232,7 @@ function ready ([json, datapoints]) {
       .duration(200)
       .attr('opacity', 0.9)
       .attr('r', 3)
-      .attr('stroke', 'red')
+      .attr('stroke', '#993333')
 
     svg
       .selectAll('.label')
@@ -232,7 +252,7 @@ function ready ([json, datapoints]) {
       .selectAll('.dam')
       .style('visibility', 'visible')
       .attr('opacity', d => {
-        if (d['risk_category'] === 'ALTO' || d['risk_category'] === 'MÉDIO') {
+        if ((d['risk_category'] === 'ALTO') || (d['risk_category'] === 'MÉDIO')) {
           return 0.8
         } else {
           return 0
@@ -276,16 +296,17 @@ function ready ([json, datapoints]) {
   d3.select('#company').on('stepin', () => {
     svg
       .selectAll('.dam')
-      .style('visibility', 'visible')
+      // .style('visibility', 'visible')
       .transition()
       .duration(200)
-      .attr('opacity', d => {
-        if (d['company_name'] === 'Vale Fertilizantes S A' || d['company_name'] === 'Vale S A') {
-          return 0.8
+      .style('visibility', d => {
+        if ((d.company_name === 'Vale Fertilizantes S A') || (d.company_name === 'Vale S A')) {
+          return 'visible'
         } else {
-          return 0
+          return 'hidden'
         }
       })
+      .attr('stroke', 'gray')
   })
 
   // showing all the dams will get checked
@@ -293,9 +314,6 @@ function ready ([json, datapoints]) {
     var checkList = ['Barragem B-2', 'Barragem B-1', 'Barragem B-4', 'Gafanhoto', 'Cajuru', 'Retiro Baixo']
     svg
       .selectAll('.dam')
-      .style('visibility', 'visible')
-      .transition()
-      .duration(200)
       .attr('opacity', d => {
         if (checkList.indexOf(d['dam_name']) !== -1) {
           return 0.8
@@ -303,6 +321,10 @@ function ready ([json, datapoints]) {
           return 0
         }
       })
+      .style('visibility', 'visible')
+      .transition()
+      .duration(200)
+      // .attr('stroke', 'gray')
   })
 
   // Make it responsive
