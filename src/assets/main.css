@@ -202,6 +202,14 @@ max-width: 975px;
             padding: 10px 0;
             }
 
+          text {
+            color: #A9A9A9;
+            font-family: 'Merriweather', serif;
+            font-size: 12px;
+            line-height: 1.5em;
+            padding: 10px 0;            
+          }
+
           footer {
               color: #6C6C6C;
               font-family: 'Maven Pro', sans-serif;

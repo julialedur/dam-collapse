@@ -34,14 +34,14 @@ var area = function (datum, boolean) {
     (datum)
 }
 
-const line = d3
-  .line()
-  .x(d => {
-    return xPositionScale(d.distance_miles)
-  })
-  .y(d => {
-    return yPositionScale(d.altitude_feet)
-  })
+// const line = d3
+//   .line()
+//   .x(d => {
+//     return xPositionScale(d.distance_miles)
+//   })
+//   .y(d => {
+//     return yPositionScale(d.altitude_feet)
+//   })
 
 d3.csv(require('./data/altitude-distance.csv'))
   .then(ready)
@@ -72,21 +72,16 @@ function ready (datapoints) {
   // .append('path') because we only want ONE path
   // .datum because we only have ONE path
 
-  svg
-    // .selectAll('.line')
-    .datum(datapoints)
-    // .enter()
-    .append('path')
-    .attr('class', 'line')
-    .attr('stroke', 'brown')
-    .attr('stroke-width', 2)
-    .attr('d', line)
-    // .transition()
-    // .duration(1000)
-    // .attrTween('stroke-dasharray', tweenDash)
-    .attr('fill', 'none')
-    .attr('id', 'mud-line')
-    .style('visibility', 'hidden')
+  // svg
+  //   .datum(datapoints)
+  //   .append('path')
+  //   .attr('class', 'line')
+  //   .attr('stroke', 'brown')
+  //   .attr('stroke-width', 2)
+  //   .attr('d', line)
+  //   .attr('fill', 'none')
+  //   .attr('id', 'mud-line')
+  //   .style('visibility', 'hidden')
 
   // add the area
   svg
@@ -97,11 +92,60 @@ function ready (datapoints) {
   var mudLine = d3.select('#mud-line')
 
   // add the circle
+  // svg
+  //   .append('circle')
+  //   .attr('fill', 'red')
+  //   .attr('r', 4)
+  //   .attr('class', 'circle')
+  //   .style('visibility', 'hidden')
+
+  // add dashed line
   svg
-    .append('circle')
-    .attr('fill', 'red')
-    .attr('r', 4)
-    .attr('class', 'circle')
+    .append('line')
+    .attr('class', 'riverLine')
+    .attr('stroke', 'gray')
+    .attr('stroke-width', 0.5)
+    .style('stroke-dasharray', ('3, 3'))
+    .attr('x1', xPositionScale(4.14))
+    .attr('y1', height)
+    .attr('x2', xPositionScale(4.14))
+    .attr('y2', height)
+    .lower()
+    // .attr('opacity', 0)
+    // .style('visibility', 'hidden')
+
+  svg.append('line')
+    .attr('class', 'line-arrow')
+    .attr('x1', xPositionScale(4.14))
+    .attr('y1', 350)
+    .attr('x2', xPositionScale(4.14))
+    .attr('y2', 350)
+    .attr('stroke-width', 0.5)
+    .attr('stroke', 'gray')
+    .attr('marker-end', 'url(#triangle)')
+    // .attr('opacity', 0)
+    .lower()
+
+  svg
+    .append('text')
+    .attr('class', 'river-label')
+    .text('Paraopeba river')
+    .attr('dx', 10)
+    .attr('y', d => yPositionScale(2450))
+    .attr('x', d => xPositionScale(4.14))
+    .attr('text-anchor', 'start')
+    // .attr('opacity', 0)
+    .style('visibility', 'hidden')
+
+  svg
+    .append('text')
+    .attr('class', 'dam-label')
+    .text('Collapsed dam')
+    .attr('dx', 10)
+    .attr('y', d => yPositionScale(2933))
+    .attr('x', d => xPositionScale(0))
+    .attr('text-anchor', 'start')
+    // .attr('opacity', 0)
     .style('visibility', 'hidden')
 
   // Axes labels
@@ -128,23 +172,6 @@ function ready (datapoints) {
     .attr('font-family', 'Open Sans')
     .attr('font-size', 13)
     .text('Distance (miles)')
-
-  // Add fill rectangles
-
-  // svg.append('g')
-  //   .selectAll('rect')
-  //   .data(datapoints)
-  //   .enter().append('rect')
-  //   .attr('class', 'highlighter')
-  //   // .attr('y', 0)
-  //   .attr('y', function(d) {
-  //     return d.altitude_feet
-  //   })
-  //   .attr('x', d => xPositionScale(d.distance_miles))
-  //   .attr('height', height)
-  //   .attr('width', xPositionScale(2) - xPositionScale(1))
-  //   .attr('fill', '#fff880')
-  //   .attr('opacity', 0.2)
 
   /* Add in your axes */
 
@@ -174,47 +201,59 @@ function ready (datapoints) {
     .attr('x', '10px')
 
   // steps
-  // d3.select('#blank-graph').on('stepin', () => {
-
-  //   svg
-  //     .selectAll('.line')
-  //     .transition()
-  //     .style('visibility', 'hidden')
-
-  //   svg
-  //     .selectAll('.circle')
-  //     .style('visibility', 'hidden')
-
-  //   svg
-  //     .datum(datapoints)
-  //     .append('path')
-  //     .attr('class', 'area')
-  //     .style('visibility', 'hidden')
-
-  // })
-
-  d3.select('#animated-line').on('stepin', () => {
-    console.log('I am stepping into line')
+  d3.select('#blank-graph').on('stepin', () => {
     svg
       .selectAll('.line')
-      .style('visibility', 'visibility')
-
-    // .attr('stroke', 'brown')
-
       .transition()
-      .duration(2000)
-      .attrTween('stroke-dasharray', tweenDash)
-      // .style('visibility', 'visible')
       .style('visibility', 'hidden')
 
     svg
       .selectAll('.circle')
-      .transition()
-      .duration(2000)
-      .attrTween('transform', translateAlong(mudLine))
-      // .style('visibility', 'visible')
       .style('visibility', 'hidden')
 
+    svg
+      .datum(datapoints)
+      .append('path')
+      .attr('class', 'area')
+      .style('visibility', 'hidden')
+
+    svg
+      .selectAll('.area')
+      .attr('d', d => area(d, false))
+      .attr('fill', '#993333')
+      // .transition()
+      // .duration(2000)
+      // .attr('d', d => area(d, true))
+
+    svg
+      .select('.riverLine')
+      .transition()
+      .attr('x1', xPositionScale(4.14))
+      .attr('y1', height)
+      .attr('x2', xPositionScale(4.14))
+      .attr('y2', height)
+
+    svg
+      .select('.line-arrow')
+      .transition()
+      .attr('x1', xPositionScale(4.14))
+      .attr('y1', 350)
+      .attr('x2', xPositionScale(4.14))
+      .attr('y2', 350)
+
+    svg
+      .selectAll('.river-label')
+      .transition()
+      .style('visibility', 'hidden')
+
+    svg
+      .selectAll('.dam-label')
+      .transition()
+      .style('visibility', 'hidden')
+  })
+
+  d3.select('#animated-line').on('stepin', () => {
+    console.log('I am stepping into line')
     svg
       .selectAll('.area')
       .attr('d', d => area(d, false))
@@ -241,46 +280,40 @@ function ready (datapoints) {
     // .attrTween('transform', translateAlong(mudLine))
 
   // Label river
-
   svg
-    .append('text')
-    .attr('class', 'river-label')
-    .text('Paraopeba river')
-    .attr('font-family', 'Open Sans')
-    .attr('font-size', 12)
-    .attr('dx', 10)
-    .attr('y', d => yPositionScale(2450))
-    .attr('x', d => xPositionScale(4.14))
-    .attr('text-anchor', 'start')
-    // .attr('opacity', 0)
+    .selectAll('.river-label')
+    .transition()
     .style('visibility', 'hidden')
 
-  // River line
+  svg
+    .selectAll('.dam-label')
+    .transition()
+    .style('visibility', 'hidden')
+
+  // reset River line
 
   svg
-    .append('line')
-    .attr('class', 'riverLine')
-    .attr('stroke', 'gray')
-    .attr('stroke-width', 0.5)
-    .style('stroke-dasharray', ('3, 3'))
+    .select('.riverLine')
+    .transition()
     .attr('x1', xPositionScale(4.14))
     .attr('y1', height)
     .attr('x2', xPositionScale(4.14))
-    .attr('y2', 0)
-    .attr('opacity', 0)
+    .attr('y2', height)
 
-  // Arrow
-
-  svg.append('line')
-    .attr('class', 'line-arrow')
+  svg
+    .select('.line-arrow')
+    .transition()
     .attr('x1', xPositionScale(4.14))
     .attr('y1', 350)
-    .attr('x2', xPositionScale(5.5))
+    .attr('x2', xPositionScale(4.14))
     .attr('y2', 350)
-    .attr('stroke-width', 0.5)
-    .attr('stroke', 'gray')
-    .attr('marker-end', 'url(#triangle)')
-    .attr('opacity', 0)
+
+  svg
+    .selectAll('.river-label')
+    .transition()
+    .style('visibility', 'hidden')
+
+  // Arrow
 
   svg.append('svg:defs').append('svg:marker')
     .attr('class', 'arrow')
@@ -300,14 +333,13 @@ function ready (datapoints) {
     console.log('I am stepping into river line')
 
     svg
-      .selectAll('.riverLine')
+      .select('.riverLine')
       .transition()
       .duration(1000)
-      .attr('x1', xPositionScale(4.14))
-      .attr('y1', height)
       .attr('x2', xPositionScale(4.14))
       .attr('y2', 0)
       .attr('opacity', 1)
+      // .style('visibility', 'visible')
 
     // Arrow
 
@@ -315,8 +347,6 @@ function ready (datapoints) {
       .select('.line-arrow')
       .transition()
       .duration(1000)
-      .attr('x1', xPositionScale(4.14))
-      .attr('y1', 350)
       .attr('x2', xPositionScale(5.5))
       .attr('y2', 350)
       .attr('opacity', 1)
@@ -346,10 +376,6 @@ function ready (datapoints) {
       .selectAll('.dam-label')
       .transition()
       .style('visibility', 'visible')
-      .attr('font-size', 12)
-      .attr('dx', 10)
-      .attr('y', d => yPositionScale(2933))
-      .attr('x', d => xPositionScale(0))
 
     // Label river
 
