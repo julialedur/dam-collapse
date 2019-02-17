@@ -14,7 +14,7 @@
     ]
   },
   "keywords": [],
-  "author": "Angela Wang, Julia Ledur, Matt Albasi, Sirui Zhu",
+  "author": "Julia Ledur, Sirui Zhu",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^5.5.0",

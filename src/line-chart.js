@@ -148,18 +148,30 @@ function ready (datapoints) {
 
   /* Add in your axes */
 
-  const xAxis = d3.axisBottom(xPositionScale).ticks(7)
+  const xAxis = d3
+    .axisBottom(xPositionScale)
+    .ticks(7)
+    .tickSize(0)
+
   svg
     .append('g')
     .attr('class', 'axis x-axis')
     .attr('transform', 'translate(0,' + height + ')')
     .call(xAxis)
+    .attr('dy', 20)
+    .attr('y', '10px')
 
-  const yAxis = d3.axisLeft(yPositionScale).ticks(7)
+  const yAxis = d3
+    .axisLeft(yPositionScale)
+    .ticks(7)
+    .tickSize(0)
+
   svg
     .append('g')
     .attr('class', 'axis y-axis')
     .call(yAxis)
+    .attr('dx', 20)
+    .attr('x', '10px')
 
   // steps
   // d3.select('#blank-graph').on('stepin', () => {
@@ -224,6 +236,8 @@ function ready (datapoints) {
     .attr('y', d => yPositionScale(2933))
     .attr('x', d => xPositionScale(0))
     .attr('text-anchor', 'start')
+    // .attr('opacity', 0)
+    .style('visibility', 'hidden')
     // .attrTween('transform', translateAlong(mudLine))
 
   // Label river
@@ -238,6 +252,8 @@ function ready (datapoints) {
     .attr('y', d => yPositionScale(2450))
     .attr('x', d => xPositionScale(4.14))
     .attr('text-anchor', 'start')
+    // .attr('opacity', 0)
+    .style('visibility', 'hidden')
 
   // River line
 
@@ -251,10 +267,12 @@ function ready (datapoints) {
     .attr('y1', height)
     .attr('x2', xPositionScale(4.14))
     .attr('y2', 0)
+    .attr('opacity', 0)
 
   // Arrow
 
   svg.append('line')
+    .attr('class', 'line-arrow')
     .attr('x1', xPositionScale(4.14))
     .attr('y1', 350)
     .attr('x2', xPositionScale(5.5))
@@ -262,9 +280,10 @@ function ready (datapoints) {
     .attr('stroke-width', 0.5)
     .attr('stroke', 'gray')
     .attr('marker-end', 'url(#triangle)')
+    .attr('opacity', 0)
 
   svg.append('svg:defs').append('svg:marker')
-    .attr('id', 'triangle')
+    .attr('class', 'arrow')
     .attr('refX', 6)
     .attr('refY', 6)
     .attr('markerWidth', 25)
@@ -273,7 +292,76 @@ function ready (datapoints) {
     .append('path')
     .attr('d', 'M 0 0 12 6 0 12 3 6')
     .style('fill', 'gray')
+    .style('visibility', 'visible')
 
+  // Second step
+
+  d3.select('#river-line').on('stepin', () => {
+    console.log('I am stepping into river line')
+
+    svg
+      .selectAll('.riverLine')
+      .transition()
+      .duration(1000)
+      .attr('x1', xPositionScale(4.14))
+      .attr('y1', height)
+      .attr('x2', xPositionScale(4.14))
+      .attr('y2', 0)
+      .attr('opacity', 1)
+
+    // Arrow
+
+    svg
+      .select('.line-arrow')
+      .transition()
+      .duration(1000)
+      .attr('x1', xPositionScale(4.14))
+      .attr('y1', 350)
+      .attr('x2', xPositionScale(5.5))
+      .attr('y2', 350)
+      .attr('opacity', 1)
+      .attr('stroke-width', 0.5)
+      .attr('stroke', 'gray')
+      .attr('marker-end', 'url(#triangle)')
+
+    // svg
+    //   .selectAll('.arrow')
+    //   .transition()
+    //   .duration(1000)
+    //   // .append('svg:defs')
+    //   // .append('svg:marker')
+    //   .attr('refX', 6)
+    //   .attr('refY', 6)
+    //   .attr('markerWidth', 25)
+    //   .attr('markerHeight', 25)
+    //   .attr('orient', 'auto')
+    //   // .append('path')
+    //   .attr('d', 'M 0 0 12 6 0 12 3 6')
+    //   .style('visibility', 'visible')
+    //   .style('fill', 'gray')
+
+    // Label collapsed dam
+
+    svg
+      .selectAll('.dam-label')
+      .transition()
+      .style('visibility', 'visible')
+      .attr('font-size', 12)
+      .attr('dx', 10)
+      .attr('y', d => yPositionScale(2933))
+      .attr('x', d => xPositionScale(0))
+
+    // Label river
+
+    svg
+      .selectAll('.river-label')
+      .transition()
+      .style('visibility', 'visible')
+      .attr('font-size', 12)
+      .attr('dx', 10)
+      .attr('y', d => yPositionScale(2450))
+      .attr('x', d => xPositionScale(4.14))
+  })
   // function render () {
   //   console.log('Something happened')
   //   let screenWidth = svg.node().parentNode.parentNode.offsetWidth
