@@ -44,7 +44,7 @@ header .lead {
   text-align: left;
   transform: translateX(-18%);
   vertical-align: top;
-
+  text-shadow: 1.1px 1.1px black;
 }
 
 header h4 {
@@ -52,24 +52,21 @@ header h4 {
   text-align: left;
   vertical-align: top;
   font-size: 20px;
-  text-shadow: 2.8px 2.8px black;
+  text-shadow: 1.1px 1.1px black;
   font-weight:300;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
   transform: translateX(-18%) 
-
 }
 
 header h1 {
   color: white;
-  font-size: 48px;
-  text-shadow: 2.8px 2.8px black;
+  font-size: 43px;
+  font-weight: 700;
+  text-shadow: 1.7px 1.7px black;
   line-height: 50px;
   text-align: left;
   transform: translateX(-18%)
-
-
-
 }
 
 
@@ -175,9 +172,9 @@ max-width: 975px;
 
 
           h5 { 
-            margin-top: 3rem; 
+            margin-top: 0.1rem; 
             margin-bottom: 1rem;
-            color: black;
+            color: #666666;
             font-family: 'Roboto', serif;
             line-height: 1.5em;
             font-size: 12px;
@@ -434,13 +431,16 @@ hr {
 
 /* Scrollytelling map city labels */
 .label {
-  color: black;
+  fill: #404040;
   font-size: 14px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
+  font-family: 'Sans Variable Pro', sans-serif;
+  font-weight: ligher;
+  letter-spacing: -0.01em;
 }
 
 /* Script ai to html - mud path graph */
@@ -550,4 +550,53 @@ hr {
 #g-volume_residue-Artboard_1 .g-pstyle1 {
   height:18px;
   text-align:center;
+}
+
+/* Line chart */ 
+
+.dam-label {
+  font-family:Source Sans Pro,sans-serif;
+  font-size: 15;
+  font-weight: lighter;
+  fill: #666666;
+}
+
+.river-label {
+  font-family:Source Sans Pro,sans-serif;
+  font-size: 15;
+  font-weight: lighter;
+  fill: #666666;
+}
+
+
+.y-axis text {
+  font-family:Source Sans Pro,sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  fill: #333333;
+}
+
+.x-axis text {
+  font-family:Source Sans Pro,sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  fill: #333333;
+}
+
+.text-x-axis {
+  font-size: 13px;
+}
+
+.text-y-axis {
+  font-size: 13px;
+}
+
+.bg { 
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

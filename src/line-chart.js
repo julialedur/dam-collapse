@@ -2,7 +2,7 @@ import * as d3 from 'd3'
 import { debounce } from 'debounce'
 import * as topojson from 'topojson'
 
-const margin = { top: 30, left: 70, right: 10, bottom: 60 }
+const margin = { top: 30, left: 80, right: 10, bottom: 70 }
 const height = 500 - margin.top - margin.bottom
 const width = 800 - margin.left - margin.right
 
@@ -93,19 +93,20 @@ function ready (datapoints) {
     // .style('visibility', 'hidden')
 
   // add leading line
+
   svg.append('line')
     .attr('class', 'line-arrow')
     .attr('x1', xPositionScale(4.14))
     .attr('y1', 350)
     .attr('x2', xPositionScale(4.14))
     .attr('y2', 350)
-    .attr('stroke-width', 5)
+    .attr('stroke-width', 2)
     .attr('stroke', 'gray')
-    // .attr('marker-end', 'url(#triangle)')
-    // .attr('marker-end', 'url(#arrowhead)')
-    // .style('visibility', 'hidden')
+  // .attr('marker-end', 'url(#triangle)')
+  // .attr('marker-end', 'url(#arrowhead)')
+  // .style('visibility', 'hidden')
 
-    // .attr('opacity', 0)
+  // .attr('opacity', 0)
     .lower()
 
   // arrow
@@ -154,8 +155,8 @@ function ready (datapoints) {
     .attr('y', 0 - margin.left)
     .attr('x', 0 - height / 2)
     .attr('dy', '1em')
-    .attr('font-family', 'Open Sans')
-    .attr('font-size', 13)
+    // .attr('font-family', 'Open Sans')
+    // .attr('font-size', 14)
     .style('text-anchor', 'middle')
     .text('Altitude (feet)')
 
@@ -166,8 +167,8 @@ function ready (datapoints) {
     .attr('y', height)
     .attr('dy', 45)
     .attr('x', width / 2)
-    .attr('font-family', 'Open Sans')
-    .attr('font-size', 13)
+    // .attr('font-family', 'Open Sans')
+    // .attr('font-size', '14px')
     .text('Distance (miles)')
 
   /* Add in your axes */
@@ -198,7 +199,9 @@ function ready (datapoints) {
     .attr('x', '10px')
 
   svg.selectAll('.domain').remove()
+
   // steps
+
   d3.select('#blank-graph').on('stepin', () => {
     svg
       .datum(datapoints)
@@ -256,7 +259,10 @@ function ready (datapoints) {
       .transition()
       .duration(1000)
       .attr('d', d => area(d, true))
+  })
 
+  d3.select('#labels').on('stepin', () => {
+    console.log('I am stepping into labels')
     svg
       .select('.riverLine')
       .transition()
@@ -269,8 +275,6 @@ function ready (datapoints) {
       .append('text')
       .attr('class', 'dam-label')
       .text('Collapsed dam')
-      .attr('font-family', 'Open Sans')
-      .attr('font-size', 12)
       .attr('dx', 10)
       .attr('y', d => yPositionScale(2933))
       .attr('x', d => xPositionScale(0))
@@ -301,7 +305,6 @@ function ready (datapoints) {
       .transition()
       .duration(1500)
       .style('visibility', 'visible')
-      .attr('font-size', 12)
       .attr('dx', 10)
       .attr('y', d => yPositionScale(2450))
       .attr('x', d => xPositionScale(4.14))
