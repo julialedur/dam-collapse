@@ -69,35 +69,13 @@ function ready (datapoints) {
     }
   }
 
-  // .append('path') because we only want ONE path
-  // .datum because we only have ONE path
-
-  // svg
-  //   .datum(datapoints)
-  //   .append('path')
-  //   .attr('class', 'line')
-  //   .attr('stroke', 'brown')
-  //   .attr('stroke-width', 2)
-  //   .attr('d', line)
-  //   .attr('fill', 'none')
-  //   .attr('id', 'mud-line')
-  //   .style('visibility', 'hidden')
-
-  // add the area
+  // add the area chart
   svg
     .datum(datapoints)
     .append('path')
     .attr('class', 'area')
 
   var mudLine = d3.select('#mud-line')
-
-  // add the circle
-  // svg
-  //   .append('circle')
-  //   .attr('fill', 'red')
-  //   .attr('r', 4)
-  //   .attr('class', 'circle')
-  //   .style('visibility', 'hidden')
 
   // add dashed line
   svg
@@ -114,17 +92,37 @@ function ready (datapoints) {
     // .attr('opacity', 0)
     // .style('visibility', 'hidden')
 
+  // add leading line
   svg.append('line')
     .attr('class', 'line-arrow')
     .attr('x1', xPositionScale(4.14))
     .attr('y1', 350)
     .attr('x2', xPositionScale(4.14))
     .attr('y2', 350)
-    .attr('stroke-width', 0.5)
+    .attr('stroke-width', 5)
     .attr('stroke', 'gray')
-    .attr('marker-end', 'url(#triangle)')
+    // .attr('marker-end', 'url(#triangle)')
+    // .attr('marker-end', 'url(#arrowhead)')
+    // .style('visibility', 'hidden')
+
     // .attr('opacity', 0)
     .lower()
+
+  // arrow
+
+  let defs = svg.append('defs')
+  let marker = defs.append('marker')
+    .attr('id', 'arrowhead')
+    .attr('markerWidth', 20)
+    .attr('markerHeight', 20)
+    .attr('refX', 0)
+    .attr('refY', 3)
+    .attr('orient', 'auto')
+    .attr('markerUnits', 'strokeWidth')
+
+  marker.append('path')
+    .attr('d', 'M0,0 L0,6 L9,3 z')
+    .attr('fill', 'gray')
 
   svg
     .append('text')
@@ -145,11 +143,10 @@ function ready (datapoints) {
     .attr('y', d => yPositionScale(2933))
     .attr('x', d => xPositionScale(0))
     .attr('text-anchor', 'start')
-    // .attr('opacity', 0)
+    .attr('opacity', 0)
     .style('visibility', 'hidden')
 
   // Axes labels
-
   svg
     .append('text')
     .attr('class', 'text-y-axis')
@@ -200,17 +197,9 @@ function ready (datapoints) {
     .attr('dx', 20)
     .attr('x', '10px')
 
+  svg.selectAll('.domain').remove()
   // steps
   d3.select('#blank-graph').on('stepin', () => {
-    svg
-      .selectAll('.line')
-      .transition()
-      .style('visibility', 'hidden')
-
-    svg
-      .selectAll('.circle')
-      .style('visibility', 'hidden')
-
     svg
       .datum(datapoints)
       .append('path')
@@ -221,9 +210,6 @@ function ready (datapoints) {
       .selectAll('.area')
       .attr('d', d => area(d, false))
       .attr('fill', '#993333')
-      // .transition()
-      // .duration(2000)
-      // .attr('d', d => area(d, true))
 
     svg
       .select('.riverLine')
@@ -232,6 +218,7 @@ function ready (datapoints) {
       .attr('y1', height)
       .attr('x2', xPositionScale(4.14))
       .attr('y2', height)
+      .attr('opacity', 0)
 
     svg
       .select('.line-arrow')
@@ -240,6 +227,14 @@ function ready (datapoints) {
       .attr('y1', 350)
       .attr('x2', xPositionScale(4.14))
       .attr('y2', 350)
+      .attr('marker-end', 'url(#arrowhead)')
+      .attr('marker-mid', 'url(#arrowhead)')
+      .attr('opacity', 0)
+
+    // svg
+    //   .select('#arrowhead')
+    //   .transition()
+    //   .style('visible', 'visibility')
 
     svg
       .selectAll('.river-label')
@@ -259,135 +254,59 @@ function ready (datapoints) {
       .attr('d', d => area(d, false))
       .attr('fill', '#993333')
       .transition()
-      .duration(2000)
+      .duration(1000)
       .attr('d', d => area(d, true))
-  })
-
-  // Label collapsed dam
-
-  svg
-    .append('text')
-    .attr('class', 'dam-label')
-    .text('Collapsed dam')
-    .attr('font-family', 'Open Sans')
-    .attr('font-size', 12)
-    .attr('dx', 10)
-    .attr('y', d => yPositionScale(2933))
-    .attr('x', d => xPositionScale(0))
-    .attr('text-anchor', 'start')
-    // .attr('opacity', 0)
-    .style('visibility', 'hidden')
-    // .attrTween('transform', translateAlong(mudLine))
-
-  // Label river
-  svg
-    .selectAll('.river-label')
-    .transition()
-    .style('visibility', 'hidden')
-
-  svg
-    .selectAll('.dam-label')
-    .transition()
-    .style('visibility', 'hidden')
-
-  // reset River line
-
-  svg
-    .select('.riverLine')
-    .transition()
-    .attr('x1', xPositionScale(4.14))
-    .attr('y1', height)
-    .attr('x2', xPositionScale(4.14))
-    .attr('y2', height)
-
-  svg
-    .select('.line-arrow')
-    .transition()
-    .attr('x1', xPositionScale(4.14))
-    .attr('y1', 350)
-    .attr('x2', xPositionScale(4.14))
-    .attr('y2', 350)
-
-  svg
-    .selectAll('.river-label')
-    .transition()
-    .style('visibility', 'hidden')
-
-  // Arrow
-
-  svg.append('svg:defs').append('svg:marker')
-    .attr('class', 'arrow')
-    .attr('refX', 6)
-    .attr('refY', 6)
-    .attr('markerWidth', 25)
-    .attr('markerHeight', 25)
-    .attr('orient', 'auto')
-    .append('path')
-    .attr('d', 'M 0 0 12 6 0 12 3 6')
-    .style('fill', 'gray')
-    .style('visibility', 'visible')
-
-  // Second step
-
-  d3.select('#river-line').on('stepin', () => {
-    console.log('I am stepping into river line')
 
     svg
       .select('.riverLine')
       .transition()
-      .duration(1000)
+      .duration(1100)
       .attr('x2', xPositionScale(4.14))
       .attr('y2', 0)
       .attr('opacity', 1)
-      // .style('visibility', 'visible')
-
-    // Arrow
-
-    svg
-      .select('.line-arrow')
-      .transition()
-      .duration(1000)
-      .attr('x2', xPositionScale(5.5))
-      .attr('y2', 350)
-      .attr('opacity', 1)
-      .attr('stroke-width', 0.5)
-      .attr('stroke', 'gray')
-      .attr('marker-end', 'url(#triangle)')
-
-    // svg
-    //   .selectAll('.arrow')
-    //   .transition()
-    //   .duration(1000)
-    //   // .append('svg:defs')
-    //   // .append('svg:marker')
-    //   .attr('refX', 6)
-    //   .attr('refY', 6)
-    //   .attr('markerWidth', 25)
-    //   .attr('markerHeight', 25)
-    //   .attr('orient', 'auto')
-    //   // .append('path')
-    //   .attr('d', 'M 0 0 12 6 0 12 3 6')
-    //   .style('visibility', 'visible')
-    //   .style('fill', 'gray')
-
     // Label collapsed dam
+    svg
+      .append('text')
+      .attr('class', 'dam-label')
+      .text('Collapsed dam')
+      .attr('font-family', 'Open Sans')
+      .attr('font-size', 12)
+      .attr('dx', 10)
+      .attr('y', d => yPositionScale(2933))
+      .attr('x', d => xPositionScale(0))
+      .attr('text-anchor', 'start')
+      .style('visibility', 'visible')
 
     svg
       .selectAll('.dam-label')
       .transition()
+      .duration(1200)
       .style('visibility', 'visible')
 
-    // Label river
+    svg
+      .select('.line-arrow')
+      .transition()
+      .duration(1200)
+      .attr('x2', xPositionScale(5.5))
+      .attr('y2', 350)
+      .attr('stroke-width', 2)
+      .attr('stroke', 'gray')
+      .attr('viewBox', '0 0 20 20')
+      .attr('marker-end', 'url(#arrowhead)')
+      .attr('marker-mid', 'url(#arrowhead)')
+      .attr('opacity', 1)
 
     svg
       .selectAll('.river-label')
       .transition()
+      .duration(1500)
       .style('visibility', 'visible')
       .attr('font-size', 12)
       .attr('dx', 10)
       .attr('y', d => yPositionScale(2450))
       .attr('x', d => xPositionScale(4.14))
   })
+
   // function render () {
   //   console.log('Something happened')
   //   let screenWidth = svg.node().parentNode.parentNode.offsetWidth
