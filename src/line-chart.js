@@ -2,7 +2,7 @@ import * as d3 from 'd3'
 import { debounce } from 'debounce'
 import * as topojson from 'topojson'
 
-const margin = { top: 30, left: 80, right: 10, bottom: 70 }
+const margin = { top: 30, left: 60, right: 10, bottom: 90 }
 const height = 500 - margin.top - margin.bottom
 const width = 800 - margin.left - margin.right
 
@@ -33,15 +33,6 @@ var area = function (datum, boolean) {
     .x(function (d) { return boolean ? xPositionScale(d.distance_miles) : 0 })
     (datum)
 }
-
-// const line = d3
-//   .line()
-//   .x(d => {
-//     return xPositionScale(d.distance_miles)
-//   })
-//   .y(d => {
-//     return yPositionScale(d.altitude_feet)
-//   })
 
 d3.csv(require('./data/altitude-distance.csv'))
   .then(ready)
@@ -81,7 +72,7 @@ function ready (datapoints) {
   svg
     .append('line')
     .attr('class', 'riverLine')
-    .attr('stroke', 'gray')
+    .attr('stroke', '#D3D3D3')
     .attr('stroke-width', 0.5)
     .style('stroke-dasharray', ('3, 3'))
     .attr('x1', xPositionScale(4.14))
@@ -89,24 +80,17 @@ function ready (datapoints) {
     .attr('x2', xPositionScale(4.14))
     .attr('y2', height)
     .lower()
-    // .attr('opacity', 0)
-    // .style('visibility', 'hidden')
 
   // add leading line
 
   svg.append('line')
     .attr('class', 'line-arrow')
     .attr('x1', xPositionScale(4.14))
-    .attr('y1', 350)
+    .attr('y1', 300)
     .attr('x2', xPositionScale(4.14))
-    .attr('y2', 350)
-    .attr('stroke-width', 2)
-    .attr('stroke', 'gray')
-  // .attr('marker-end', 'url(#triangle)')
-  // .attr('marker-end', 'url(#arrowhead)')
-  // .style('visibility', 'hidden')
-
-  // .attr('opacity', 0)
+    .attr('y2', 300)
+    .attr('stroke-width', 1.4)
+    .attr('stroke', '#D3D3D3')
     .lower()
 
   // arrow
@@ -114,8 +98,8 @@ function ready (datapoints) {
   let defs = svg.append('defs')
   let marker = defs.append('marker')
     .attr('id', 'arrowhead')
-    .attr('markerWidth', 20)
-    .attr('markerHeight', 20)
+    .attr('markerWidth', 15)
+    .attr('markerHeight', 15)
     .attr('refX', 0)
     .attr('refY', 3)
     .attr('orient', 'auto')
@@ -123,17 +107,16 @@ function ready (datapoints) {
 
   marker.append('path')
     .attr('d', 'M0,0 L0,6 L9,3 z')
-    .attr('fill', 'gray')
+    .attr('fill', '#D3D3D3')
 
   svg
     .append('text')
     .attr('class', 'river-label')
     .text('Paraopeba river')
     .attr('dx', 10)
-    .attr('y', d => yPositionScale(2450))
-    .attr('x', d => xPositionScale(4.14))
+    .attr('y', yPositionScale(2470))
+    .attr('x', xPositionScale(4.14))
     .attr('text-anchor', 'start')
-    // .attr('opacity', 0)
     .style('visibility', 'hidden')
 
   svg
@@ -141,10 +124,9 @@ function ready (datapoints) {
     .attr('class', 'dam-label')
     .text('Collapsed dam')
     .attr('dx', 10)
-    .attr('y', d => yPositionScale(2933))
-    .attr('x', d => xPositionScale(0))
+    .attr('y', yPositionScale(2933))
+    .attr('x', xPositionScale(0))
     .attr('text-anchor', 'start')
-    .attr('opacity', 0)
     .style('visibility', 'hidden')
 
   // Axes labels
@@ -167,8 +149,6 @@ function ready (datapoints) {
     .attr('y', height)
     .attr('dy', 45)
     .attr('x', width / 2)
-    // .attr('font-family', 'Open Sans')
-    // .attr('font-size', '14px')
     .text('Distance (miles)')
 
   /* Add in your axes */
@@ -183,7 +163,7 @@ function ready (datapoints) {
     .attr('class', 'axis x-axis')
     .attr('transform', 'translate(0,' + height + ')')
     .call(xAxis)
-    .attr('dy', 20)
+    .attr('dy', 10)
     .attr('y', '10px')
 
   const yAxis = d3
@@ -204,12 +184,6 @@ function ready (datapoints) {
 
   d3.select('#blank-graph').on('stepin', () => {
     svg
-      .datum(datapoints)
-      .append('path')
-      .attr('class', 'area')
-      .style('visibility', 'hidden')
-
-    svg
       .selectAll('.area')
       .attr('d', d => area(d, false))
       .attr('fill', '#993333')
@@ -227,31 +201,25 @@ function ready (datapoints) {
       .select('.line-arrow')
       .transition()
       .attr('x1', xPositionScale(4.14))
-      .attr('y1', 350)
+      .attr('y1', 300)
       .attr('x2', xPositionScale(4.14))
-      .attr('y2', 350)
+      .attr('y2', 300)
       .attr('marker-end', 'url(#arrowhead)')
       .attr('marker-mid', 'url(#arrowhead)')
       .attr('opacity', 0)
 
-    // svg
-    //   .select('#arrowhead')
-    //   .transition()
-    //   .style('visible', 'visibility')
-
     svg
-      .selectAll('.river-label')
+      .select('.river-label')
       .transition()
       .style('visibility', 'hidden')
 
     svg
-      .selectAll('.dam-label')
+      .select('.dam-label')
       .transition()
       .style('visibility', 'hidden')
   })
 
   d3.select('#animated-line').on('stepin', () => {
-    console.log('I am stepping into line')
     svg
       .selectAll('.area')
       .attr('d', d => area(d, false))
@@ -259,88 +227,184 @@ function ready (datapoints) {
       .transition()
       .duration(1000)
       .attr('d', d => area(d, true))
-  })
 
-  d3.select('#labels').on('stepin', () => {
-    console.log('I am stepping into labels')
+    svg
+      .select('.river-label')
+      .transition()
+      .style('visibility', 'hidden')
+
+    svg
+      .select('.dam-label')
+      .transition()
+      .style('visibility', 'hidden')
+
     svg
       .select('.riverLine')
       .transition()
-      .duration(1100)
+      .attr('x1', xPositionScale(4.14))
+      .attr('y1', height)
       .attr('x2', xPositionScale(4.14))
-      .attr('y2', 0)
-      .attr('opacity', 1)
-    // Label collapsed dam
-    svg
-      .append('text')
-      .attr('class', 'dam-label')
-      .text('Collapsed dam')
-      .attr('dx', 10)
-      .attr('y', d => yPositionScale(2933))
-      .attr('x', d => xPositionScale(0))
-      .attr('text-anchor', 'start')
-      .style('visibility', 'visible')
-
-    svg
-      .selectAll('.dam-label')
-      .transition()
-      .duration(1200)
-      .style('visibility', 'visible')
+      .attr('y2', height)
+      .attr('opacity', 0)
 
     svg
       .select('.line-arrow')
       .transition()
-      .duration(1200)
+      .attr('x1', xPositionScale(4.14))
+      .attr('y1', 300)
+      .attr('x2', xPositionScale(4.14))
+      .attr('y2', 300)
+      .attr('marker-end', 'url(#arrowhead)')
+      .attr('marker-mid', 'url(#arrowhead)')
+      .attr('opacity', 0)
+  })
+
+  d3.select('#labels').on('stepin', () => {
+  // dam label
+    svg
+      .select('.dam-label')
+      .transition()
+      .duration(1300)
+      .style('visibility', 'visible')
+    // river notation
+    svg
+      .select('.riverLine')
+      .transition()
+      .duration(800)
+      .attr('x2', xPositionScale(4.14))
+      .attr('y2', 0)
+      .attr('opacity', 1)
+
+    svg
+      .select('.line-arrow')
+      .transition()
+      .duration(800)
       .attr('x2', xPositionScale(5.5))
-      .attr('y2', 350)
-      .attr('stroke-width', 2)
-      .attr('stroke', 'gray')
+      .attr('y2', 300)
+      .attr('stroke-width', 1.4)
+      .attr('stroke', '#D3D3D3')
       .attr('viewBox', '0 0 20 20')
       .attr('marker-end', 'url(#arrowhead)')
       .attr('marker-mid', 'url(#arrowhead)')
       .attr('opacity', 1)
 
     svg
-      .selectAll('.river-label')
+      .select('.river-label')
       .transition()
       .duration(1500)
       .style('visibility', 'visible')
-      .attr('dx', 10)
-      .attr('y', d => yPositionScale(2450))
-      .attr('x', d => xPositionScale(4.14))
   })
 
-  // function render () {
-  //   console.log('Something happened')
-  //   let screenWidth = svg.node().parentNode.parentNode.offsetWidth
-  //   let screenHeight = window.innerHeight
-  //   let newWidth = screenWidth - margin.left - margin.right
-  //   let newHeight = screenHeight - margin.top - margin.bottom
+  function render () {
+    console.log('Something happened')
+    let screenWidth = svg.node().parentNode.parentNode.offsetWidth
+    let screenHeight = (height / width) * screenWidth
+    let newWidth = screenWidth - margin.left - margin.right
+    let newHeight = screenHeight - margin.top - margin.bottom
+    console.log(newWidth)
+    console.log(newHeight)
 
-  //   // Update your SVG
-  //   let actualSvg = d3.select(svg.node().parentNode)
-  //   actualSvg
-  //     .attr('height', newHeight + margin.top + margin.bottom)
-  //     .attr('width', newWidth + margin.left + margin.right)
+    // Update your SVG
+    let actualSvg = d3.select(svg.node().parentNode)
+    actualSvg
+      .attr('height', newHeight + margin.top + margin.bottom)
+      .attr('width', newWidth + margin.left + margin.right)
 
-  //   console.log(actualSvg)
+    // Update scales (depends on your scales)
+    xPositionScale.range([0, newWidth])
+    yPositionScale.range([newHeight, 0])
 
-  //   // Update scales (depends on your scales)
-  //   xPositionScale.range([0, newWidth])
-  //   yPositionScale.range([newHeight, 0])
+    // Reposition/redraw your elements
 
-  //   // Reposition/redraw your elements
+    svg
+      .selectAll('.area')
+      .attr('d', d => area(d, false))
+      .attr('fill', '#993333')
+      .attr('d', d => area(d, true))
 
-  //   svg
-  //     .selectAll('.area')
-  //     .attr('d', area)
+    svg
+      .select('.riverLine')
+      .transition()
+      .attr('x1', xPositionScale(4.14))
+      .attr('y1', height)
+      .attr('x2', xPositionScale(4.14))
+      .attr('y2', height)
 
-  //   // Update axes if necessary
-  //   svg.select('.x-axis').call(xAxis)
-  //   svg.select('.y-axis').call(yAxis)
-  // }
+    svg
+      .select('.line-arrow')
+      .transition()
+      .attr('x1', xPositionScale(4.14))
+      .attr('y1', 300)
+      .attr('x2', xPositionScale(4.14))
+      .attr('y2', 300)
 
-  // // Every time the window resizes, run the render function
-  // window.addEventListener('resize', debounce(render, 200))
-  // render()
+    svg
+      .select('.dam-label')
+      .attr('y', d => yPositionScale(2933))
+      .attr('x', d => xPositionScale(0))
+
+    svg
+      .select('.river-label')
+      .attr('y', d => yPositionScale(2470))
+      .attr('x', d => xPositionScale(4.14))
+
+    if (newWidth < 400 || newHeight < 400) {
+      svg.selectAll('.text').attr('font-size', 8)
+    } else {
+      svg.selectAll('.text').attr('font-size', 12)
+    }
+
+    if (newWidth < 320) {
+      svg
+        .select('.line-arrow')
+        .transition()
+        .attr('x1', xPositionScale(4.14))
+        .attr('y1', 450)
+        .attr('x2', xPositionScale(4.14))
+        .attr('y2', 450)
+      svg.selectAll('.text').attr('font-size', 6)
+    } else {
+      svg
+        .select('.line-arrow')
+        .transition()
+        .attr('x1', xPositionScale(4.14))
+        .attr('y1', 300)
+        .attr('x2', xPositionScale(4.14))
+        .attr('y2', 300)
+    }
+
+    if (newWidth < 350) {
+      svg
+        .select('.line-arrow')
+        .transition()
+        .attr('x1', xPositionScale(4.14))
+        .attr('y1', yPositionScale(2530))
+        .attr('x2', xPositionScale(4.14))
+        .attr('y2', yPositionScale(2530))
+      svg
+        .select('.river-label')
+        .attr('y', d => yPositionScale(2530))
+    } else {
+      svg
+        .select('.river-label')
+        .attr('y', d => yPositionScale(2470))
+        .attr('x', d => xPositionScale(4.14))
+      svg
+        .select('.line-arrow')
+        .transition()
+        .attr('x1', xPositionScale(4.14))
+        .attr('y1', 300)
+        .attr('x2', xPositionScale(4.14))
+        .attr('y2', 300)
+    }
+
+    // Update axes if necessary
+    svg.select('.x-axis').call(xAxis)
+    svg.select('.y-axis').call(yAxis)
+    svg.selectAll('.domain').remove()
+  }
+
+  // Every time the window resizes, run the render function
+  window.addEventListener('resize', debounce(render, 300))
+  render()
 }
