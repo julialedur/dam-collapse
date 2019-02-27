@@ -266,8 +266,8 @@ import * as topojson from 'topojson'
     },
     {
       slug: 'two',
-      zoom: 14,
-      mobilezoom: 14.0,
+      zoom: 13.5,
+      mobilezoom: 13.5,
       focus: [-44.19972, -20.14333],
       visibleLayers: ['southamerica-farther', 'southamerica-closer']
     },
