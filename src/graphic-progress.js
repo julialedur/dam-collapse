@@ -24,11 +24,11 @@ import * as topojson from 'topojson'
   // [ -19.8556513797124, -58.85] is bottom right
 
   const layers = [
-    // {
-    //   'name': 'southamerica-farther',
-    //   'filePath': require('./images/zoom-big.png'),
-    //   'cornerCoords': [[ -85.419276845, 10.427299400 ], [ -33.088919943, -56.482344413 ]]
-    // },
+    {
+      'name': 'southamerica-farther',
+      'filePath': require('./images/zoom-big.png'),
+      'cornerCoords': [[ -85.419276845, 10.427299400 ], [ -33.088919943, -56.482344413 ]]
+    },
     {
       'name': 'southamerica-closer',
       'filePath': require('./images/zoom1.jpg'),
